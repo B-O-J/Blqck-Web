@@ -1,52 +1,93 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
-  <head>
+<head>
+  <meta charset="UTF-8">
+  <title>Blqck</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: black;
+      color: #f0f0f0;
+      font-family: 'EB Garamond', serif;
+      line-height: 1.8;
+      font-size: 1.2em;
+      padding: 3em 2em;
+      text-align: center;
+    }
 
-    <title>Blqck</title>
+    h1 {
+      font-size: 3em;
+      font-weight: 600;
+      margin-bottom: 0.5em;
+      color: #ffffff;
+      opacity: 0;
+      animation: fadeIn 1.2s ease forwards;
+    }
 
-    <style>
-      button{
-        color: blue;
-        border: none;
-        font-style: italic;
-        cursor: pointer
-      };
-     
-      
-    </style>
+    p {
+      max-width: 800px;
+      margin: 1.2em auto;
+      opacity: 0;
+      animation: fadeIn 1.2s ease forwards;
+    }
 
-  <head>
+    p:nth-of-type(1) { animation-delay: 0.5s; }
+    p:nth-of-type(2) { animation-delay: 0.8s; }
 
-    <body>
+    a button {
+      margin-top: 1em;
+      padding: 0.6em 1.5em;
+      background-color: transparent;
+      border: 1px solid #888;
+      color: #00aced;
+      font-style: italic;
+      font-size: 1em;
+      border-radius: 5px;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
 
-      <center>
-        <h1>
-          The Blqck Story
-        </h1>  
-      </center>
+    a button:hover {
+      background-color: #222;
+      color: white;
+    }
 
-      <p>
-        Greetings, from Blqcck
-      </p>
+    img {
+      margin-top: 2em;
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      opacity: 0;
+      animation: fadeIn 1.5s ease forwards;
+      animation-delay: 1.2s;
+    }
 
-      <p>
-        <a href="consciousness.html">
-          <button>
-          click here
-          </button>
-        </a>
-      </p>
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
 
-      <img src="images/index04.jpg"
-       width="1340" height="750">
+<body>
 
-       
-      <script>
-       
-      </script>
+  <h1>BlQCK: A mirror in the dark</h1>
 
-      
-    </body>
+  <p>
+    Welcome to a journey through thought, pain, observation, and belief — stitched together by one wandering mind.  
+    Every page you enter holds a fragment — a mirror — of truth, doubt, faith, fear, and awakening.
+  </p>
+
+  <p>
+    Click below to begin — if you dare to confront your consciousness.
+  </p>
+
+  <a href="consciousness.html">
+    <button>click here</button>
+  </a>
+
+  <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1350&q=80" alt="Dark Ocean Horizon">
+
+</body>
 
 </html>

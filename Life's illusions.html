@@ -1,61 +1,76 @@
 <!DOCTYPE html>
-<html>
-    
-  <head>
+<html lang="en">  
+<head>
+	<meta charset="UTF-8">
+	<title>Blqck</title>
 
-    <title>Blqck</title>
+	<!-- Font Import -->
+	<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
 
-    <style>
+	<style>
+		body {
+			background-color: #000;
+			color: #f0f0f0;
+			font-family: 'EB Garamond', serif;
+			line-height: 1.8;
+			font-size: 1.2em;
+			padding: 4em 2em;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
 
-       body{
-        background-color: black;
-        color: white;
-      }
+		p {
+			max-width: 700px;
+			text-align: center;
+			margin-bottom: 1.5em;
+			opacity: 0;
+			animation: fadeIn 1.2s ease forwards;
+		}
 
-      button{
-        border: none;
-        background-color: black;
-        color: blue;
-        font-style: italic;
-        cursor: pointer;
-      }
+		p:nth-child(1) { animation-delay: 0.3s; }
+		p:nth-child(2) { animation-delay: 0.6s; }
+		p:nth-child(3) { animation-delay: 0.9s; }
+		p:nth-child(4) { animation-delay: 1.2s; }
+		p:nth-child(5) { animation-delay: 1.5s; }
 
-    </style>
-     
-  </head>
+		a button {
+			margin-top: 2em;
+			padding: 0.8em 2em;
+			background-color: transparent;
+			border: 1px solid #888;
+			color: #00aced;
+			font-style: italic;
+			font-size: 1em;
+			border-radius: 5px;
+			transition: background 0.3s ease, color 0.3s ease;
+		}
 
-  <body>
-    
-    <p>
-      Captivated by the beauty
-    </p>
-      
-    <p>
-      Lost in the illusion
-    </p>
+		a button:hover {
+			background-color: #222;
+			color: white;
+		}
 
-    <p>
-      Wallowed in the delusion
-    </p>
+		@keyframes fadeIn {
+			from { opacity: 0; transform: translateY(10px); }
+			to { opacity: 1; transform: translateY(0); }
+		}
+	</style>
+	 
+</head>
 
-    <p>
-      Jarred back into reality
-    </p>
+<body>
 
-    <p>
-      A pleasurable deception.
-    </p>
+	<p>Captivated by the beauty</p>
+	<p>Lost in the illusion</p>
+	<p>Wallowed in the delusion</p>
+	<p>Jarred back into reality</p>
+	<p>A pleasurable deception.</p>
 
-    
-    <a href="live.html">
-      <button>
-        click here
-      </button>
-    </a>
+	<a href="live.html">
+		<button>click here</button>
+	</a>
 
-
-
-  </body>
-
-  
-<html>
+</body>
+</html>
