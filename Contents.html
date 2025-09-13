@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Blqck | Contents</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'EB Garamond', serif;
+      color: #e0e0e0;
+      font-size: 1.1em;
+      line-height: 1.8;
+      background: linear-gradient(rgba(0,0,0,0.9), rgba(15,15,15,0.95)), 
+                  url("https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=1350&q=80");
+      background-size: cover;
+      background-position: center;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      animation: fadeIn 1.5s ease;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1em 2em;
+      background: rgba(0,0,0,0.6);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    header h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.3em;
+      margin: 0;
+      color: #fff;
+    }
+    .logo {
+			height: 50px;
+			width: auto;
+			max-width: 150px;
+			display: block;
+		}
+		.logo-link {
+			display: flex;
+			align-items: center;
+		}
+		.logo-link img {
+			max-height: 50px;
+			width: auto;
+			object-fit: contain;
+    }
+    nav { position: relative; }
+    nav button {
+      background: none;
+      border: none;
+      color: #f0f0f0;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1em;
+      cursor: pointer;
+    }
+    nav button:hover { color: #00aced; }
+    nav ul {
+      display: none;
+      position: absolute;
+      right: 0;
+      background: rgba(0,0,0,0.9);
+      list-style: none;
+      margin: 0;
+      padding: 0.5em 0;
+      border-radius: 5px;
+      min-width: 150px;
+    }
+    nav ul li { padding: 0.5em 1em; }
+    nav ul li a {
+      text-decoration: none;
+      color: #f0f0f0;
+      font-family: 'Montserrat', sans-serif;
+    }
+    nav ul li a:hover { color: #00aced; }
+    nav:hover ul { display: block; }
+
+    /* Contents */
+    .contents {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2em;
+    }
+    .contents h2 {
+      font-size: 2.2em;
+      margin-bottom: 1em;
+      font-family: 'Montserrat', sans-serif;
+      color: #fff;
+    }
+    .contents ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      max-width: 600px;
+      width: 100%;
+    }
+    .contents ul li {
+      margin: 0.8em 0;
+      opacity: 0;
+      animation: fadeUp 1.2s ease forwards;
+    }
+    .contents ul li:nth-of-type(1) { animation-delay: 0.2s; }
+    .contents ul li:nth-of-type(2) { animation-delay: 0.4s; }
+    .contents ul li:nth-of-type(3) { animation-delay: 0.6s; }
+    .contents ul li:nth-of-type(4) { animation-delay: 0.8s; }
+    .contents ul li:nth-of-type(5) { animation-delay: 1.0s; }
+
+    .contents ul li a {
+      text-decoration: none;
+      color: #e0e0e0;
+      font-size: 1.2em;
+      transition: color 0.3s ease, text-shadow 0.3s ease;
+    }
+    .contents ul li a:hover {
+      color: #00aced;
+      text-shadow: 0 0 10px #00aced;
+    }
+
+    .back-home {
+      margin-top: 3em;
+    }
+    .back-home a button {
+      background-color: transparent;
+      border: 1px solid #00aced;
+      color: #00aced;
+      font-style: italic;
+      padding: 0.5em 1.5em;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border-radius: 4px;
+    }
+    .back-home a button:hover {
+      background-color: #00aced;
+      color: black;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+			<a href="index.html" class="logo-link">
+				<img src="Images/Logo.png" alt="Logo" class="logo">
+			</a>
+		</div>
+    <h1>BlQCK: A Mirror in the Dark</h1>
+    <nav>
+      <button>☰ Menu</button>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="contents">
+    <h2>Table of Contents</h2>
+    <ul>
+      <li><a href="Consciousness.html">I. Consciousness</a></li>
+      <li><a href="Know-yourself.html">II. Know Yourself</a></li>
+      <li><a href="Solitude.html">III. Solitude</a></li>
+      <li><a href="Faith.html">IV. Faith</a></li>
+      <li><a href="Awakening.html">V. Awakening</a></li>
+    </ul>
+
+    <div class="back-home">
+      <a href="index.html"><button>← Back to Home</button></a>
+    </div>
+  </div>
+
+</body>
+</html>

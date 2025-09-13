@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Blqck | About</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'EB Garamond', serif;
+      color: #e0e0e0;
+      line-height: 1.8;
+      font-size: 1.1em;
+      background: linear-gradient(rgba(0,0,0,0.9), rgba(15,15,15,0.95)), 
+                  url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1350&q=80");
+      background-size: cover;
+      background-position: center;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      animation: fadeIn 1.5s ease;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1em 2em;
+      background: rgba(0,0,0,0.6);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    header h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.3em;
+      margin: 0;
+      color: #fff;
+    }
+    .logo {
+			height: 50px;
+			width: auto;
+			max-width: 150px;
+			display: block;
+		}
+		.logo-link {
+			display: flex;
+			align-items: center;
+		}
+		.logo-link img {
+			max-height: 50px;
+			width: auto;
+			object-fit: contain;
+    }
+    nav { position: relative; }
+    nav button {
+      background: none;
+      border: none;
+      color: #f0f0f0;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1em;
+      cursor: pointer;
+    }
+    nav button:hover { color: #00aced; }
+    nav ul {
+      display: none;
+      position: absolute;
+      right: 0;
+      background: rgba(0,0,0,0.9);
+      list-style: none;
+      margin: 0;
+      padding: 0.5em 0;
+      border-radius: 5px;
+      min-width: 150px;
+    }
+    nav ul li { padding: 0.5em 1em; }
+    nav ul li a {
+      text-decoration: none;
+      color: #f0f0f0;
+      font-family: 'Montserrat', sans-serif;
+    }
+    nav ul li a:hover { color: #00aced; }
+    nav:hover ul { display: block; }
+
+    /* About section */
+    .about {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 3em 2em;
+      text-align: center;
+    }
+    .about h2 {
+      font-size: 2.2em;
+      margin-bottom: 1em;
+      font-family: 'Montserrat', sans-serif;
+      color: #fff;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+    .about p {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1.2em;
+      color: #ddd;
+      line-height: 1.9;
+      text-shadow: 0 0 5px rgba(0,0,0,0.7);
+    }
+
+    .back-links {
+      margin-top: 3em;
+    }
+    .back-links a button {
+      background-color: transparent;
+      border: 1px solid #00aced;
+      color: #00aced;
+      font-style: italic;
+      padding: 0.5em 1.5em;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border-radius: 4px;
+      margin: 0.5em;
+    }
+    .back-links a button:hover {
+      background-color: #00aced;
+      color: black;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes glow {
+      from { text-shadow: 0 0 5px #00aced, 0 0 10px #00aced; }
+      to { text-shadow: 0 0 15px #00aced, 0 0 25px #00aced; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+			<a href="index.html" class="logo-link">
+				<img src="Images/Logo.png" alt="Logo" class="logo">
+			</a>
+		</div>
+    <h1>BlQCK: A Mirror in the Dark</h1>
+    <nav>
+      <button>☰ Menu</button>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="contents.html">Contents</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="about">
+    <h2>About the Author</h2>
+    <p>
+      This collection, <em>BlQCK: A Mirror in the Dark</em>, is not just poetry,
+      it is reflection. Each verse is a step into solitude, faith, and awakening;
+      capturing the whispers of consciousness that often slip through
+      silence.  
+      <br><br>
+      Through shadow and light, these words attempt to illuminate the spaces
+      between knowing and not knowing, between the soul and the self.  
+      <br><br>
+      May you find fragments of yourself in these verses, and may the journey
+      through them bring you closer to your own reflection in the dark.
+    </p>
+
+    <div class="back-links">
+      <a href="index.html"><button>← Back to Home</button></a>
+      <a href="contents.html"><button>View Contents →</button></a>
+    </div>
+  </div>
+
+</body>
+</html>
