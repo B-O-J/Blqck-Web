@@ -2,22 +2,28 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Blqck</title>
+  <title>Blqck | The Woman</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
   <style>
-		<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@1,500;600&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
-		
     body {
       margin: 0;
-      background: url("https://images.unsplash.com/photo-1529101091764-c3526daf38fe?auto=format&fit=crop&w=1650&q=80") no-repeat center center fixed;
-      background-size: cover;
-      color: #f2f2f2;
       font-family: 'EB Garamond', serif;
-      font-size: 1.25em;
-      line-height: 1.9em;
-      padding: 10vh 12vw;
-      max-width: 850px;
-      margin: auto;
-      backdrop-filter: blur(6px);
+      font-size: 1.6em;
+      line-height: 2;
+      color: #e6e6e6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)),
+        url("https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=1350&q=80");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      padding: 4em 1.5em;
+      text-align: center;
+      animation: fadeIn 2s ease-in-out;
     }
 
     /* Header */
@@ -26,83 +32,62 @@
       justify-content: space-between;
       align-items: center;
       padding: 1em 2em;
-      background: rgba(0, 0, 0, 0.65);
+      background: rgba(0,0,0,0.6);
       position: sticky;
       top: 0;
-      z-index: 100;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
+      z-index: 10;
+      width: 100%;
     }
-
     header h1 {
       font-family: 'Montserrat', sans-serif;
-      font-size: 1.4em;
+      font-size: 1.5em;
       margin: 0;
-      color: #f5f5f5;
-      letter-spacing: 1px;
+      color: #fff;
     }
-
-    /* Logo */
-    .logo-link img {
-      max-height: 45px;
+    .logo {
+      height: 50px;
       width: auto;
-      object-fit: contain;
-    }
-
-    /* Dropdown Navigation */
-    nav {
-      position: relative;
-      display: inline-block;
-    }
-
-    nav button {
-      background: none;
-      border: none;
-      color: #f0f0f0;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 1em;
-      cursor: pointer;
-      padding: 0.3em 0.8em;
-    }
-    nav button:hover { color: #00aced; }
-
-    nav ul {
-      display: none;
-      position: absolute;
-      right: 0;
-      background: rgba(0,0,0,0.95);
-      list-style: none;
-      margin: 0;
-      padding: 0.5em 0;
-      border-radius: 6px;
-      min-width: 160px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-    }
-
-    nav ul li {
-      padding: 0.6em 1.2em;
-    }
-
-    nav ul li a {
-      text-decoration: none;
-      color: #f0f0f0;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.95em;
-    }
-
-    nav ul li a:hover {
-      color: #00aced;
-    }
-
-    nav:hover ul {
+      max-width: 150px;
       display: block;
     }
+    .logo-link { display: flex; align-items: center; }
+    .logo-link img { max-height: 50px; width: auto; object-fit: contain; }
 
-    /* Paragraphs */
-    p {
-      margin-bottom: 2em;
+    /* Navigation */
+    nav { position: relative; display: inline-block; }
+    nav button {
+      background: none; border: none; color: #f0f0f0;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1em; cursor: pointer;
+    }
+    nav button:hover { color: #00aced; }
+    nav ul {
+      display: none; position: absolute; right: 0;
+      background: rgba(0,0,0,0.9);
+      list-style: none; margin: 0; padding: 0.5em 0;
+      border-radius: 5px; min-width: 150px;
+    }
+    nav ul li { padding: 0.5em 1em; }
+    nav ul li a {
+      text-decoration: none; color: #f0f0f0;
+      font-family: 'Montserrat', sans-serif;
+    }
+    nav ul li a:hover { color: #00aced; }
+    nav:hover ul { display: block; }
+
+    /* Poem text */
+    .poem { max-width: 750px; margin: auto; }
+    .poem p {
+      margin: 1.5em 0;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: textFade 1s forwards;
       text-align: justify;
       text-indent: 1.5em;
     }
+    .poem p:nth-child(1) { animation-delay: 0.5s; }
+    .poem p:nth-child(2) { animation-delay: 2s; }
+    .poem p:nth-child(3) { animation-delay: 4s; }
 
     /* Navigation buttons */
     .nav-buttons {
@@ -117,37 +102,43 @@
       border: 1px solid #00aced;
       color: #00aced;
       font-style: italic;
-      padding: 0.6em 1.6em;
+      padding: 0.5em 1.5em;
       cursor: pointer;
       transition: all 0.3s ease;
-      border-radius: 5px;
-      font-size: 1em;
+      border-radius: 4px;
     }
     .nav-buttons a button:hover {
       background-color: #00aced;
-      color: #000;
+      color: black;
     }
 
     /* Footer */
     footer {
       text-align: center;
-      padding: 1.5em 1em;
-      font-size: 0.85em;
-      background: rgba(0, 0, 0, 0.65);
-      margin-top: 4em;
-      border-top: 1px solid rgba(255,255,255,0.1);
+      padding: 1em;
+      font-size: 0.9em;
+      background: rgba(0,0,0,0.6);
+      width: 100%;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes textFade {
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
+
 <body>
-	
   <header>
     <div class="logo">
       <a href="index.html" class="logo-link">
-        <img src="Images/Logo.png" alt="Logo">
+        <img src="Images/Logo.png" alt="Logo" class="logo">
       </a>
     </div>
-    <h1>A Mirror in the Dark</h1>
+    <h1>BlQCK: A Mirror in the Dark</h1>
     <nav>
       <button>☰ Menu</button>
       <ul>
@@ -158,24 +149,25 @@
     </nav>
   </header>
 
-  <p>
-    Perceiving the mother to be an angel, God preserved that with her death, now women do not feel the same.
-  </p> 
-	
-  <p>
-    It is soul crushing to know that having a mutual connection with a person isn’t enough because regardless of how you feel, they could choose someone else.
-  </p> 
+  <div class="poem">
+    <p>
+      Perceiving the mother to be an angel, God preserved that with her death, now women do not feel the same.
+    </p> 
+  
+    <p>
+      It is soul crushing to know that having a mutual connection with a person isn’t enough because regardless of how you feel, they could choose someone else.
+    </p> 
+  
+    <p>
+      Never hesitate to dispense of a woman if the need arises because she is a ruthless opportunistic creature that cares about nothing but herself. If you find yourself dependent in any situation, romantic or business, that is your cue to leave. 
+    </p>
 
-  <p>
-    Never hesitate to dispense of a woman if the need arises because she is a ruthless opportunistic creature that cares about nothing but herself. If you find yourself dependent in any situation, romantic or business, that is your cue to leave. 
-  </p>
-
-  <div class="nav-buttons">
-    <a href="Know-yourself.html"><button>← Previous</button></a>
-    <a href="Survival.html"><button>Next →</button></a>
+    <div class="nav-buttons">
+      <a href="Know-yourself.html"><button>← Previous</button></a>
+      <a href="Survival.html"><button>Next →</button></a>
+    </div>
   </div>
-		
+
   <footer role="contentinfo">© 2025 Blqck — A Mirror in the Dark</footer>
-	
 </body>
 </html>
