@@ -3,31 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <title>Blqck | Know-yourself</title>
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      padding: 0;
-      background: radial-gradient(circle at top, #111 0%, #000 100%);
-      color: #e6e6e6;
       font-family: 'EB Garamond', serif;
       font-size: 1.6em;
       line-height: 2;
-      text-align: center;
-      padding: 4em 1.5em;
+      color: #e6e6e6;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      background-image: 
-        radial-gradient(circle at 20% 20%, rgba(255,255,255,0.05) 0%, transparent 25%),
-        radial-gradient(circle at 80% 60%, rgba(255,255,255,0.04) 0%, transparent 30%);
-      background-blend-mode: overlay;
+      background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)),
+        url("https://images.unsplash.com/photo-1500048993953-d23a436266cf?auto=format&fit=crop&w=1350&q=80");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      padding: 4em 1.5em;
+      text-align: center;
       animation: fadeIn 2s ease-in-out;
     }
-	
-	  /* Header */
+
+    /* Header */
     header {
       display: flex;
       justify-content: space-between;
@@ -37,89 +36,56 @@
       position: sticky;
       top: 0;
       z-index: 10;
+      width: 100%;
     }
-
     header h1 {
       font-family: 'Montserrat', sans-serif;
       font-size: 1.5em;
       margin: 0;
       color: #fff;
     }
-
     .logo {
-			height: 50px;
-			width: auto;
-			max-width: 150px;
-			display: block;
-		}
-		.logo-link {
-			display: flex;
-			align-items: center;
-		}
-		.logo-link img {
-			max-height: 50px;
-			width: auto;
-			object-fit: contain;
-		}
-
-    /* Dropdown Navigation */
-    nav {
-      position: relative;
-      display: inline-block;
-    }
-
-    nav button {
-      background: none;
-      border: none;
-      color: #f0f0f0;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 1em;
-      cursor: pointer;
-    }
-
-    nav button:hover { color: #00aced; }
-
-    nav ul {
-      display: none;
-      position: absolute;
-      right: 0;
-      background: rgba(0,0,0,0.9);
-      list-style: none;
-      margin: 0;
-      padding: 0.5em 0;
-      border-radius: 5px;
-      min-width: 150px;
-    }
-
-    nav ul li {
-      padding: 0.5em 1em;
-    }
-
-    nav ul li a {
-      text-decoration: none;
-      color: #f0f0f0;
-      font-family: 'Montserrat', sans-serif;
-    }
-
-    nav ul li a:hover {
-      color: #00aced;
-    }
-
-    nav:hover ul {
+      height: 50px;
+      width: auto;
+      max-width: 150px;
       display: block;
     }
+    .logo-link { display: flex; align-items: center; }
+    .logo-link img { max-height: 50px; width: auto; object-fit: contain; }
 
-    p {
+    /* Navigation */
+    nav { position: relative; display: inline-block; }
+    nav button {
+      background: none; border: none; color: #f0f0f0;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1em; cursor: pointer;
+    }
+    nav button:hover { color: #00aced; }
+    nav ul {
+      display: none; position: absolute; right: 0;
+      background: rgba(0,0,0,0.9);
+      list-style: none; margin: 0; padding: 0.5em 0;
+      border-radius: 5px; min-width: 150px;
+    }
+    nav ul li { padding: 0.5em 1em; }
+    nav ul li a {
+      text-decoration: none; color: #f0f0f0;
+      font-family: 'Montserrat', sans-serif;
+    }
+    nav ul li a:hover { color: #00aced; }
+    nav:hover ul { display: block; }
+
+    /* Poem text */
+    .poem { max-width: 750px; margin: auto; }
+    .poem p {
       margin: 1.5em 0;
-      max-width: 750px;
       opacity: 0;
       transform: translateY(20px);
       animation: textFade 1s forwards;
     }
-
-    p:nth-child(1) { animation-delay: 0.5s; }
-    p:nth-child(2) { animation-delay: 2s; }
-    p:nth-child(3) { animation-delay: 4s; }
+    .poem p:nth-child(1) { animation-delay: 0.5s; }
+    .poem p:nth-child(2) { animation-delay: 2s; }
+    .poem p:nth-child(3) { animation-delay: 4s; }
 
     .highlight {
       color: #aaaaff;
@@ -131,11 +97,13 @@
       text-shadow: 0 0 12px #5555ff;
     }
 
-    /* Buttons */
+    /* Navigation buttons */
     .nav-buttons {
       display: flex;
       justify-content: space-between;
       margin-top: 3em;
+      max-width: 750px;
+      width: 100%;
     }
     .nav-buttons a button {
       background-color: transparent;
@@ -151,37 +119,33 @@
       background-color: #00aced;
       color: black;
     }
-		
-		/* Footer */
+
+    /* Footer */
     footer {
       text-align: center;
       padding: 1em;
       font-size: 0.9em;
       background: rgba(0,0,0,0.6);
+      width: 100%;
     }
-		
+
     @keyframes fadeIn {
       from { opacity: 0; }
       to { opacity: 1; }
     }
-
     @keyframes textFade {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      to { opacity: 1; transform: translateY(0); }
     }
-	</style>
+  </style>
 </head>
 
 <body>
-
-	<header>
+  <header>
     <div class="logo">
-			<a href="index.html" class="logo-link">
-				<img src="Images/Logo.png" alt="Logo" class="logo">
-			</a>
-		</div>
+      <a href="index.html" class="logo-link">
+        <img src="Images/Logo.png" alt="Logo" class="logo">
+      </a>
+    </div>
     <h1>BlQCK: A Mirror in the Dark</h1>
     <nav>
       <button>☰ Menu</button>
@@ -193,31 +157,31 @@
     </nav>
   </header>
 
-  <p>
-    Behave like them but do not become them; what a life, what a burden!  
-    It is both demanding and exhausting remaining a <span class="highlight">self</span> and not losing that self.  
-    Seem too different, you risk being hated and maligned. Conform, then you risk being one of them with no voice or reason.  
-    We all wear <span class="highlight">masks</span>; present a person, else they impose a persona that’s not you.
-  </p>
+  <div class="poem">
+    <p>
+      Behave like them but do not become them; what a life, what a burden!  
+      It is both demanding and exhausting remaining a <span class="highlight">self</span> and not losing that self.  
+      Seem too different, you risk being hated and maligned. Conform, then you risk being one of them with no voice or reason.  
+      We all wear <span class="highlight">masks</span>; present a person, else they impose a persona that’s not you.
+    </p>
   
-  <p>
-    Far too many live in an <span class="highlight">illusion</span> wearing a mask trying to fit in,  
-    wandering too far away from reality, aimlessly fantasizing about an idealistic world.  
-    Losing the sense of self living in delusion, the truth seems alien.  
-    The more delusional, the longer the suffering.
-  </p>
+    <p>
+      Far too many live in an <span class="highlight">illusion</span> wearing a mask trying to fit in,  
+      wandering too far away from reality, aimlessly fantasizing about an idealistic world.  
+      Losing the sense of self living in delusion, the truth seems alien.  
+      The more delusional, the longer the suffering.
+    </p>
   
-  <p>
-    <span class="highlight">Know yourself.</span>
-  </p>
+    <p>
+      <span class="highlight">Know yourself.</span>
+    </p>
 
     <div class="nav-buttons">
       <a href="Consciousness.html"><button>← Previous</button></a>
       <a href="The-woman.html"><button>Next →</button></a>
     </div>
   </div>
-	
-	<footer role="contentinfo">© 2025 Blqck — A Mirror in the Dark</footer>
-</body> 
-</html>
 
+  <footer role="contentinfo">© 2025 Blqck — A Mirror in the Dark</footer>
+</body>
+</html>
