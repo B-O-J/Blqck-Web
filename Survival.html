@@ -23,6 +23,88 @@
       padding: 5vh 10vw;
       letter-spacing: 0.5px;
     }
+		
+	  /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1em 2em;
+      background: rgba(0,0,0,0.6);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    header h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.5em;
+      margin: 0;
+      color: #fff;
+    }
+
+    .logo {
+			height: 50px;
+			width: auto;
+			max-width: 150px;
+			display: block;
+		}
+		.logo-link {
+			display: flex;
+			align-items: center;
+		}
+		.logo-link img {
+			max-height: 50px;
+			width: auto;
+			object-fit: contain;
+		}
+
+    /* Dropdown Navigation */
+    nav {
+      position: relative;
+      display: inline-block;
+    }
+
+    nav button {
+      background: none;
+      border: none;
+      color: #f0f0f0;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1em;
+      cursor: pointer;
+    }
+
+    nav button:hover { color: #00aced; }
+
+    nav ul {
+      display: none;
+      position: absolute;
+      right: 0;
+      background: rgba(0,0,0,0.9);
+      list-style: none;
+      margin: 0;
+      padding: 0.5em 0;
+      border-radius: 5px;
+      min-width: 150px;
+    }
+
+    nav ul li {
+      padding: 0.5em 1em;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #f0f0f0;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    nav ul li a:hover {
+      color: #00aced;
+    }
+
+    nav:hover ul {
+      display: block;
+    }
 
     p {
       margin-bottom: 2em;
@@ -54,6 +136,23 @@
 </head>
 
 <body>
+
+  <header>
+    <div class="logo">
+			<a href="index.html" class="logo-link">
+				<img src="Images/Logo.png" alt="Logo" class="logo">
+			</a>
+		</div>
+    <h1>BlQCK: A Mirror in the Dark</h1>
+    <nav>
+      <button>☰ Menu</button>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Contents.html">Table of Contents</a></li>
+        <li><a href="About.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
 
 	<p> 
 		He looked back and wondered how he survived?
