@@ -62,15 +62,20 @@
     }
 
     nav button {
-      background: none;
-      border: none;
-      color: #f0f0f0;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 1em;
+      background-color: transparent;
+      border: 1px solid #00aced;
+      color: #00aced;
+      font-style: italic;
+      padding: 0.5em 1.5em;
       cursor: pointer;
+      transition: all 0.3s ease;
+      border-radius: 4px;
     }
 
-    nav button:hover { color: #00aced; }
+    nav button:hover { 
+			background-color: #00aced; 
+			color: black;
+		}
 
     nav ul {
       display: none;
