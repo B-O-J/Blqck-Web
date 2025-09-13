@@ -2,27 +2,23 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Blqck | Know-yourself</title>
+  <title>Blqck | Know Yourself</title>
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       font-family: 'EB Garamond', serif;
-      font-size: 1.6em;
-      line-height: 2;
+      font-size: 1.2em; /* matches blqck.html */
+      line-height: 1.8;
       color: #e6e6e6;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
       background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)),
-        url("https://images.unsplash.com/photo-1500048993953-d23a436266cf?auto=format&fit=crop&w=1350&q=80");
+        url("https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?auto=format&fit=crop&w=1350&q=80");
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
-      padding: 4em 1.5em;
-      text-align: center;
       animation: fadeIn 2s ease-in-out;
     }
 
@@ -74,6 +70,17 @@
     }
     nav ul li a:hover { color: #00aced; }
     nav:hover ul { display: block; }
+
+    /* Main container */
+    .intro {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 3em 1.5em;
+    }
 
     /* Poem text */
     .poem { max-width: 750px; margin: auto; }
@@ -157,28 +164,30 @@
     </nav>
   </header>
 
-  <div class="poem">
-    <p>
-      Behave like them but do not become them; what a life, what a burden!  
-      It is both demanding and exhausting remaining a <span class="highlight">self</span> and not losing that self.  
-      Seem too different, you risk being hated and maligned. Conform, then you risk being one of them with no voice or reason.  
-      We all wear <span class="highlight">masks</span>; present a person, else they impose a persona that’s not you.
-    </p>
-  
-    <p>
-      Far too many live in an <span class="highlight">illusion</span> wearing a mask trying to fit in,  
-      wandering too far away from reality, aimlessly fantasizing about an idealistic world.  
-      Losing the sense of self living in delusion, the truth seems alien.  
-      The more delusional, the longer the suffering.
-    </p>
-  
-    <p>
-      <span class="highlight">Know yourself.</span>
-    </p>
+  <div class="intro">
+    <div class="poem">
+      <p>
+        Behave like them but do not become them; what a life, what a burden!  
+        It is both demanding and exhausting remaining a <span class="highlight">self</span> and not losing that self.  
+        Seem too different, you risk being hated and maligned. Conform, then you risk being one of them with no voice or reason.  
+        We all wear <span class="highlight">masks</span>; present a person, else they impose a persona that’s not you.
+      </p>
+    
+      <p>
+        Far too many live in an <span class="highlight">illusion</span> wearing a mask trying to fit in,  
+        wandering too far away from reality, aimlessly fantasizing about an idealistic world.  
+        Losing the sense of self living in delusion, the truth seems alien.  
+        The more delusional, the longer the suffering.
+      </p>
+    
+      <p>
+        <span class="highlight">Know yourself.</span>
+      </p>
 
-    <div class="nav-buttons">
-      <a href="Consciousness.html"><button>← Previous</button></a>
-      <a href="The-woman.html"><button>Next →</button></a>
+      <div class="nav-buttons">
+        <a href="Consciousness.html"><button>← Previous</button></a>
+        <a href="The-woman.html"><button>Next →</button></a>
+      </div>
     </div>
   </div>
 
