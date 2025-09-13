@@ -40,11 +40,20 @@
     }
 
     .logo {
-      font-size: 1.5em;
-      font-weight: bold;
-      color: #00aced;
-      font-family: 'Montserrat', sans-serif;
-    }
+			height: 45px;
+			width: auto;
+			max-width: 150px;
+			display: block;
+		}
+		.logo-link {
+			display: flex;
+			align-items: center;
+		}
+		.logo-link img {
+			max-height: 45px;
+			width: auto;
+			object-fit: contain;
+		}
 
     /* Dropdown Navigation */
     nav {
@@ -150,7 +159,11 @@
 <body>
 
   <header>
-    <div class="logo">B</div>
+    <div class="logo">
+			<a href="index.html" class="logo-link">
+				<img src="Images/Logo.png" alt="Logo" class="logo">
+			</a>
+		</div>
     <h1>BlQCK: A Mirror in the Dark</h1>
     <nav>
       <button>☰ Menu</button>
@@ -174,7 +187,7 @@
   </div>
 
   <footer>
-    © 2025 Blqck. All Rights Reserved.
+    © 2025 Blqck. All Rights Reserved
   </footer>
 
 </body>
