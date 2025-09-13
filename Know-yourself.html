@@ -1,23 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Blqck | Know-yourself</title>
-	<style>
-		@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&display=swap');
-
-		body {
-			background-color: #0d0d0d;
-			color: #e0e0e0;
-			font-family: 'EB Garamond', serif;
-			font-size: 1.2em;
-			line-height: 1.8;
-			padding: 3em 2em;
-			max-width: 800px;
-			margin: auto;
-			text-align: justify;
-			transition: all 0.3s ease;
-		}
+  <meta charset="UTF-8">
+  <title>Blqck | Know-yourself</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: radial-gradient(circle at top, #111 0%, #000 100%);
+      color: #e6e6e6;
+      font-family: 'EB Garamond', serif;
+      font-size: 1.6em;
+      line-height: 2;
+      text-align: center;
+      padding: 4em 1.5em;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-image: 
+        radial-gradient(circle at 20% 20%, rgba(255,255,255,0.05) 0%, transparent 25%),
+        radial-gradient(circle at 80% 60%, rgba(255,255,255,0.04) 0%, transparent 30%);
+      background-blend-mode: overlay;
+      animation: fadeIn 2s ease-in-out;
+    }
 	
 	  /* Header */
     header {
@@ -101,9 +109,27 @@
       display: block;
     }
 
-		p {
-			margin-bottom: 2em;
-		}
+    p {
+      margin: 1.5em 0;
+      max-width: 750px;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: textFade 1s forwards;
+    }
+
+    p:nth-child(1) { animation-delay: 0.5s; }
+    p:nth-child(2) { animation-delay: 2s; }
+    p:nth-child(3) { animation-delay: 4s; }
+
+    .highlight {
+      color: #aaaaff;
+      transition: color 0.3s ease, text-shadow 0.3s ease;
+      cursor: pointer;
+    }
+    .highlight:hover {
+      color: #ffffff;
+      text-shadow: 0 0 12px #5555ff;
+    }
 
     /* Buttons */
     .nav-buttons {
@@ -133,6 +159,18 @@
       font-size: 0.9em;
       background: rgba(0,0,0,0.6);
     }
+		
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes textFade {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 	</style>
 </head>
 
@@ -155,20 +193,23 @@
     </nav>
   </header>
 
-	<p>
-		Behave like them but do not become them; what a life, what a burden! It is both demanding and exhausting remaining a self and not losing that self.
-		Seem too different, you risk being hated and maligned. Conform, then you risk being one of them with no voice or reason. 
-		We all wear masks; present a person, else they impose a persona that’s not you.
-	</p>
-	
-	<p>
-		Far too many live in an illusion wearing a mask trying to fit in, wandering too far away from reality, aimlessly fantasizing about an idealistic world. Losing the sense of self living in delusion, the truth seem alien. 
-		The more delusional, the longer the suffering.
-	</p>
-	
-	<p>
-		Know yourself.
-	</p>
+  <p>
+    Behave like them but do not become them; what a life, what a burden!  
+    It is both demanding and exhausting remaining a <span class="highlight">self</span> and not losing that self.  
+    Seem too different, you risk being hated and maligned. Conform, then you risk being one of them with no voice or reason.  
+    We all wear <span class="highlight">masks</span>; present a person, else they impose a persona that’s not you.
+  </p>
+  
+  <p>
+    Far too many live in an <span class="highlight">illusion</span> wearing a mask trying to fit in,  
+    wandering too far away from reality, aimlessly fantasizing about an idealistic world.  
+    Losing the sense of self living in delusion, the truth seems alien.  
+    The more delusional, the longer the suffering.
+  </p>
+  
+  <p>
+    <span class="highlight">Know yourself.</span>
+  </p>
 
     <div class="nav-buttons">
       <a href="Consciousness.html"><button>← Previous</button></a>
