@@ -105,27 +105,13 @@
 			margin-bottom: 2em;
 		}
 
-		a button {
-			padding: 0.6em 1.2em;
-			background-color: transparent;
-			border: 1px solid #007acc;
-			color: #007acc;
-			font-style: italic;
-			font-size: 1em;
-			border-radius: 0.3em;
-			transition: background-color 0.3s, color 0.3s;
-		}
-
-		a button:hover {
-			background-color: #007acc;
-			color: black;
-		}
-
-		button {
-			cursor: pointer;
-		}
-		
-		.page-button a button {
+    /* Buttons */
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 3em;
+    }
+    .nav-buttons a button {
       background-color: transparent;
       border: 1px solid #00aced;
       color: #00aced;
@@ -135,9 +121,17 @@
       transition: all 0.3s ease;
       border-radius: 4px;
     }
-    .page-button a button:hover {
+    .nav-buttons a button:hover {
       background-color: #00aced;
       color: black;
+    }
+		
+		/* Footer */
+    footer {
+      text-align: center;
+      padding: 1em;
+      font-size: 0.9em;
+      background: rgba(0,0,0,0.6);
     }
 	</style>
 </head>
@@ -176,13 +170,11 @@
 		Know yourself.
 	</p>
 
-	<p>
-		<a href="The-woman.html">
-			<button class="page-button">
-			click here
-			</button>
-		</a>
-	</p>
+    <div class="nav-buttons">
+      <a href="Consciousness.html"><button>← Previous</button></a>
+      <a href="The-woman.html"><button>Next →</button></a>
+    </div>
+  </div>
 	
 	<footer role="contentinfo">© 2025 Blqck — A Mirror in the Dark</footer>
 </body> 
