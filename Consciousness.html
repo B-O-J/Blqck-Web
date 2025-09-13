@@ -1,83 +1,173 @@
 <!DOCTYPE html>
-<html>   
-<head>	
-	<meta charset="UTF-8">
-	<title>Blqck</title>
-	<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
-	
-	<style>
-		body {
-			background: linear-gradient(to bottom, #000000, #1a1a1a);
-			color: #e0e0e0;
-			font-family: 'EB Garamond', serif;
-			font-size: 1.1em;
-			line-height: 1.8;
-			padding: 2em;
-			animation: fadeIn 1.5s ease;
-		}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Blqck | Consciousness</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;1,400&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'EB Garamond', serif;
+      color: #e0e0e0;
+      font-size: 1.1em;
+      line-height: 1.9;
+      background: linear-gradient(rgba(0,0,0,0.9), rgba(10,10,10,0.95)), 
+                  url("https://images.unsplash.com/photo-1527489377706-5bf97e608852?auto=format&fit=crop&w=1350&q=80");
+      background-size: cover;
+      background-position: center;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      animation: fadeIn 1.5s ease;
+    }
 
-		p {
-			margin-bottom: 2em;
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1em 2em;
+      background: rgba(0,0,0,0.6);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    header h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.3em;
+      margin: 0;
+      color: #fff;
+    }
+    .logo {
+			height: 50px;
+			width: auto;
+			max-width: 150px;
+			display: block;
 		}
+		.logo-link {
+			display: flex;
+			align-items: center;
+		}
+		.logo-link img {
+			max-height: 50px;
+			width: auto;
+			object-fit: contain;
+    }
+    nav { position: relative; }
+    nav button {
+      background: none;
+      border: none;
+      color: #f0f0f0;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1em;
+      cursor: pointer;
+    }
+    nav button:hover { color: #00aced; }
+    nav ul {
+      display: none;
+      position: absolute;
+      right: 0;
+      background: rgba(0,0,0,0.9);
+      list-style: none;
+      margin: 0;
+      padding: 0.5em 0;
+      border-radius: 5px;
+      min-width: 150px;
+    }
+    nav ul li { padding: 0.5em 1em; }
+    nav ul li a {
+      text-decoration: none;
+      color: #f0f0f0;
+      font-family: 'Montserrat', sans-serif;
+    }
+    nav ul li a:hover { color: #00aced; }
+    nav:hover ul { display: block; }
 
-		button {
-			background-color: transparent;
-			border: 1px solid #4444ff;
-			color: #4444ff;
-			font-style: italic;
-			padding: 0.5em 1em;
-			cursor: pointer;
-			transition: all 0.3s ease;
-		}
+    /* Content */
+    .content {
+      flex: 1;
+      max-width: 800px;
+      margin: 3em auto;
+      padding: 0 1em;
+      text-align: justify;
+    }
+    .content p {
+      margin-bottom: 2em;
+      opacity: 0;
+      animation: fadeUp 1.2s ease forwards;
+    }
+    .content p:nth-of-type(1) { animation-delay: 0.2s; }
+    .content p:nth-of-type(2) { animation-delay: 0.5s; }
+    .content p:nth-of-type(3) { animation-delay: 0.8s; }
+    .content p:nth-of-type(4) { animation-delay: 1.1s; }
+    .content p:nth-of-type(5) { animation-delay: 1.4s; }
 
-		button:hover {
-			background-color: #4444ff;
-			color: black;
-		}
+    /* Buttons */
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 3em;
+    }
+    .nav-buttons a button {
+      background-color: transparent;
+      border: 1px solid #00aced;
+      color: #00aced;
+      font-style: italic;
+      padding: 0.5em 1.5em;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border-radius: 4px;
+    }
+    .nav-buttons a button:hover {
+      background-color: #00aced;
+      color: black;
+    }
 
-		a {
-			text-decoration: none;
-		}
-
-		@keyframes fadeIn {
-			from { opacity: 0; transform: translateY(20px); }
-			to { opacity: 1; transform: translateY(0); }
-		}
-	</style>
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
 </head>
-
 <body>
- 
-	<p>
-		We speak different languages and if you are conscious enough, you will meet someone that understands yours. 
-		Ignorance, they say is bliss but is it; are you curious or content not knowing? The mind is always curious and there is no limit to the extent it can go, it leads to Insanity; rigidity is the death of the mind. Would you rather be dead or insane? 
-	</p> 
-	
-	<p>
-		Sometimes you will be weak but in that weakness, how strong will you be? No one really cares about you so ultimately you need to always look out for yourself.
-	</p>
 
-	<p>
-		The journey through hell is long, dark and lonely, very few survive to see the other side. On the other side is a life of isolation and solitude, what better life is there to live if not a life of solace? 
-		If you haven’t experienced darkness, can you appreciate true happiness?
-		Meeting someone that speaks your language guarantees nothing, because you both are still entirely different. However this is guaranteed; they will leave if or when you can’t provide value or they hurt you if you are someone they would like to be.
-	</p>
+  <header>
+    <div class="logo">
+			<a href="index.html" class="logo-link">
+				<img src="Images/Logo.png" alt="Logo" class="logo">
+			</a>
+		</div>
+    <h1>BlQCK: A Mirror in the Dark</h1>
+    <nav>
+      <button>☰ Menu</button>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="contents.html">Table of Contents</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
 
-	<p>
-		Who then can you count on as humans can’t do it all alone? Look around and what you find is nature and its magnificence. Who designed it all? God is perfect but in his perfection, there is a flaw; we are made in his image and if you want to see God, look within. But humans are capable of evil as the holy book says “the heart of man is wicked….”-
-		Life can be cruel, evil and vile; that could be God’s wrath punishing a man for disobedience, be strong enough, soon he will provide respite; that is God’s perfection. His wrath is the journey through hell; is God evil?
-	</p>
+  <div class="content">
+    <p>We speak different languages and if there is enough consciousness, meeting an individual that speaks the same language is inevitable. Ignorance, they say is bliss but is it; is there curiousity or outright ignorance? The mind is always curious and there is no limit to the extent it can go, it leads to Insanity; rigidity is the death of the mind. Which is preferable, death or insanity?</p>
 
-	<p>
-		To err is human, to forgive is divine. A man’s disobedience should be forgiven if he asks for forgiveness, after-all he is human; how disobedient then could you be to incur God’s wrath and a journey through hell? 
-		Pray for strength, pray for courage, pray for guidance; because the journey in hell is certain.
-	</p>
+    <p>Weakness sometimes is certain, how strong then will an individual be? It is a selfish world so ultimately self care is of utmost importance.</p>
 
-  <p>
-    <a href="Know-yourself.html">
-      <button aria-label="Go to Know Yourself page">click here</button>
-    </a>
-  </p>
+    <p>The journey through hell is long, dark and lonely, very few survive to see the other side. On the other side is a life of isolation and solitude, what better life is there to live if not a life of solace? If an individual is ignorant of darkness, can he appreciate true happiness? Meeting someone that speaks the same language guarantees nothing, because two entities are distinctly different. However this is guaranteed; Absence of value guarantees loneliness, neglect and suffering.</p>
+
+    <p>Who then is reliable? Look around and what is inevitable is nature and its magnificence. Who designed it all? God is perfect but in that perfection, there is a flaw; Humans are made in His image and if an individual wants to see God, he should look within, but humans are capable of evil as the Holy Book says “the heart of man is wicked….”- Life can be cruel, evil and vile; that could be God’s wrath punishing an individual for disobedience, be strong enough, soon He will provide respite; that is God’s perfection. His wrath is the journey through hell; is God evil?</p>
+
+    <p>To err is human, to forgive is divine. A individual’s disobedience should be forgiven if he asks for forgiveness, after-all he is human; how disobedient then could an individual be to incur God’s wrath and a journey through hell? Pray for strength, pray for courage, pray for guidance; because the journey in hell is certain.</p>
+
+    <div class="nav-buttons">
+      <a href="index.html"><button>← Previous</button></a>
+      <a href="Know-yourself.html"><button>Next →</button></a>
+    </div>
+  </div>
 
 </body>
 </html>
