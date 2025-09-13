@@ -4,54 +4,49 @@
   <meta charset="UTF-8">
   <title>Blqck</title>
   <style>
-    /* Import font for elegance */
-    @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@1,500&display=swap');
-
+		<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@1,500;600&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+		
     body {
-      background-color: #0a0a0a;
+      margin: 0;
+      background: url("https://images.unsplash.com/photo-1529101091764-c3526daf38fe?auto=format&fit=crop&w=1650&q=80") no-repeat center center fixed;
+      background-size: cover;
       color: #f2f2f2;
       font-family: 'EB Garamond', serif;
-      font-size: 1.2em;
-      line-height: 1.8em;
-      padding: 8vh 12vw;
-      max-width: 800px;
+      font-size: 1.25em;
+      line-height: 1.9em;
+      padding: 10vh 12vw;
+      max-width: 850px;
       margin: auto;
+      backdrop-filter: blur(6px);
     }
-		
-	  /* Header */
+
+    /* Header */
     header {
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 1em 2em;
-      background: rgba(0,0,0,0.6);
+      background: rgba(0, 0, 0, 0.65);
       position: sticky;
       top: 0;
-      z-index: 10;
+      z-index: 100;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
     }
 
     header h1 {
       font-family: 'Montserrat', sans-serif;
-      font-size: 1.5em;
+      font-size: 1.4em;
       margin: 0;
-      color: #fff;
+      color: #f5f5f5;
+      letter-spacing: 1px;
     }
 
-    .logo {
-			height: 50px;
-			width: auto;
-			max-width: 150px;
-			display: block;
-		}
-		.logo-link {
-			display: flex;
-			align-items: center;
-		}
-		.logo-link img {
-			max-height: 50px;
-			width: auto;
-			object-fit: contain;
-		}
+    /* Logo */
+    .logo-link img {
+      max-height: 45px;
+      width: auto;
+      object-fit: contain;
+    }
 
     /* Dropdown Navigation */
     nav {
@@ -66,30 +61,32 @@
       font-family: 'Montserrat', sans-serif;
       font-size: 1em;
       cursor: pointer;
+      padding: 0.3em 0.8em;
     }
-
     nav button:hover { color: #00aced; }
 
     nav ul {
       display: none;
       position: absolute;
       right: 0;
-      background: rgba(0,0,0,0.9);
+      background: rgba(0,0,0,0.95);
       list-style: none;
       margin: 0;
       padding: 0.5em 0;
-      border-radius: 5px;
-      min-width: 150px;
+      border-radius: 6px;
+      min-width: 160px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
     }
 
     nav ul li {
-      padding: 0.5em 1em;
+      padding: 0.6em 1.2em;
     }
 
     nav ul li a {
       text-decoration: none;
       color: #f0f0f0;
       font-family: 'Montserrat', sans-serif;
+      font-size: 0.95em;
     }
 
     nav ul li a:hover {
@@ -100,47 +97,57 @@
       display: block;
     }
 
+    /* Paragraphs */
     p {
-      margin-bottom: 2.2em;
+      margin-bottom: 2em;
       text-align: justify;
       text-indent: 1.5em;
     }
 
-    button {
-      padding: 0.7em 2em;
-      background-color: transparent;
-      color: #6495ed;
-      border: 1px solid #6495ed;
-      font-style: italic;
-      font-size: 1em;
-      border-radius: 6px;
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
-
-    button:hover {
-      background-color: #6495ed;
-      color: black;
-    }
-
-    a {
-      text-decoration: none;
-      display: block;
-      text-align: center;
+    /* Navigation buttons */
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
       margin-top: 3em;
+      max-width: 750px;
+      width: 100%;
+    }
+    .nav-buttons a button {
+      background-color: transparent;
+      border: 1px solid #00aced;
+      color: #00aced;
+      font-style: italic;
+      padding: 0.6em 1.6em;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border-radius: 5px;
+      font-size: 1em;
+    }
+    .nav-buttons a button:hover {
+      background-color: #00aced;
+      color: #000;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 1.5em 1em;
+      font-size: 0.85em;
+      background: rgba(0, 0, 0, 0.65);
+      margin-top: 4em;
+      border-top: 1px solid rgba(255,255,255,0.1);
     }
   </style>
 </head>
-
-
 <body>
 	
-	<header>
+  <header>
     <div class="logo">
-			<a href="index.html" class="logo-link">
-				<img src="Images/Logo.png" alt="Logo" class="logo">
-			</a>
-		</div>
-    <h1>BlQCK: A Mirror in the Dark</h1>
+      <a href="index.html" class="logo-link">
+        <img src="Images/Logo.png" alt="Logo">
+      </a>
+    </div>
+    <h1>A Mirror in the Dark</h1>
     <nav>
       <button>☰ Menu</button>
       <ul>
@@ -151,25 +158,24 @@
     </nav>
   </header>
 
-	<p>
-		Perceiving the mother to be an angel, God preserved that with her death, now women do not feel the same.
-	</p> 
+  <p>
+    Perceiving the mother to be an angel, God preserved that with her death, now women do not feel the same.
+  </p> 
 	
-	<p>
-		It is soul crushing to know that having a mutual connection with a person isn’t enough because regardless of how you feel, they could choose someone else.
-	</p> 
+  <p>
+    It is soul crushing to know that having a mutual connection with a person isn’t enough because regardless of how you feel, they could choose someone else.
+  </p> 
 
-	<p>
-		Never hesitate to dispense of a woman if the need arises because she is a ruthless opportunistic creature that cares about nothing but herself. If you find yourself dependent in any situation, romantic or business, that is your cue to leave. 
-	</p>
+  <p>
+    Never hesitate to dispense of a woman if the need arises because she is a ruthless opportunistic creature that cares about nothing but herself. If you find yourself dependent in any situation, romantic or business, that is your cue to leave. 
+  </p>
 
-	<p>
-		<a href="Survival.html"> 
-			<button>
-			click here
-			</button>
-		</a>
-	</p>
+  <div class="nav-buttons">
+    <a href="Know-yourself.html"><button>← Previous</button></a>
+    <a href="Survival.html"><button>Next →</button></a>
+  </div>
+		
+  <footer role="contentinfo">© 2025 Blqck — A Mirror in the Dark</footer>
 	
 </body>
 </html>
