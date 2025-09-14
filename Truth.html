@@ -1,53 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8">
   <title>Blqck | Truth</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;1,400&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    :root{
-      --accent: #00aced;
-      --background-img: url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80");
-    }
-
-    /* Page base */
-    html,body{height:100%;margin:0;}
-    body{
-      font-family: "EB Garamond", serif;
-      background:
-        linear-gradient(rgba(0,0,0,0.85), rgba(6,6,6,0.95)),
-        var(--background-img);
+    body {
+      margin: 0;
+      font-family: 'EB Garamond', serif;
+      font-size: 1.2em;
+      line-height: 1.8;
+      color: #e6e6e6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)),
+				url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80");
       background-size: cover;
       background-position: center;
-      color:#f2f2f2;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      display:flex;
-      flex-direction:column;
-      min-height:100vh;
+      background-attachment: fixed;
+      text-align: center;
+      animation: fadeIn 2s ease-in-out;
+    }
+		
+		/* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1em 2em;
+      background: rgba(0,0,0,0.6);
+      position: sticky;
+      top: 0;
+      z-index: 10;
     }
 
-    /* subtle slow background shift for life */
-    @keyframes bgShift {
-      0% { background-position: 50% 45%; }
-      50% { background-position: 50% 55%; }
-      100% { background-position: 50% 45%; }
+    header h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.5em;
+      margin: 0;
+      color: #fff;
     }
-    body{ animation: bgShift 18s ease-in-out infinite; }
 
-    /* header (consistent) */
-    header{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      padding:0.9rem 1.2rem;
-      background: rgba(0,0,0,0.45);
-      backdrop-filter: blur(4px);
-      position:sticky;
-      top:0;
-      z-index:20;
     .logo {
 			height: 50px;
 			width: auto;
@@ -62,100 +56,116 @@
 			max-height: 50px;
 			width: auto;
 			object-fit: contain;
-    }
-    nav button:hover{ color:var(--accent); }
-    nav ul{
-      display:none; position:absolute; right:0; top:calc(100% + 6px); background:rgba(0,0,0,0.9);
-      list-style:none;padding:0.5rem 0;margin:0;border-radius:6px; min-width:160px;
-      box-shadow:0 8px 24px rgba(0,0,0,0.6);
-    }
-    nav ul li{ padding:0.45rem 0.9rem; }
-    nav ul li a{ color:#eee; text-decoration:none; font-family:"Montserrat",sans-serif; font-size:0.95rem; }
-    nav:hover ul{ display:block; }
+		}
 
-    /* poem container */
-    .poem-wrap{
-      flex:1;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:3.2rem 1.2rem;
-    }
-    .poem{
-      max-width:760px;
-      width:100%;
-      text-align:center;
-      font-size:1.45rem;
-      line-height:1.9;
-      padding:2rem 1rem;
-      background: linear-gradient(180deg, rgba(0,0,0,0.18), rgba(0,0,0,0.12));
-      border-radius:10px;
-      border: 1px solid rgba(255,255,255,0.03);
-      box-shadow: 0 10px 40px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.02);
+    /* Dropdown Navigation */
+    nav {
+      position: relative;
+      display: inline-block;
     }
 
-    /* each line reveals in sequence */
-    .line{
-      opacity:0;
-      transform: translateY(12px);
-      animation: reveal 700ms ease forwards;
-      margin:0.6rem 0;
-    }
-    .line:nth-of-type(1){ animation-delay: 0.25s; }
-    .line:nth-of-type(2){ animation-delay: 0.55s; }
-    .line:nth-of-type(3){ animation-delay: 0.85s; }
-    .line:nth-of-type(4){ animation-delay: 1.15s; }
-    .line:nth-of-type(5){ animation-delay: 1.45s; }
-    .line:nth-of-type(6){ animation-delay: 1.75s; }
-    .line:nth-of-type(7){ animation-delay: 2.05s; }
-    .line:nth-of-type(8){ animation-delay: 2.35s; }
-    .line:nth-of-type(9){ animation-delay: 2.65s; }
-
-    @keyframes reveal {
-      to { opacity:1; transform: translateY(0); }
+    nav button {
+      background: none;
+      border: none;
+      color: #f0f0f0;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1em;
+      cursor: pointer;
     }
 
-    /* action row */
-    .action-row{
-      display:flex;
-      justify-content:space-between;
-      gap:1rem;
-      margin-top:2.2rem;
-      align-items:center;
-    }
-    .action-row a button{
-      cursor:pointer;
-      background:transparent;
-      border:1px solid var(--accent);
-      color:var(--accent);
-      font-family:"Montserrat",sans-serif;
-      font-style:italic;
-      padding:0.5rem 1.1rem;
-      border-radius:6px;
-      transition: all 220ms ease;
-      font-size:0.95rem;
-    }
-    .action-row a button:hover{
-      background:var(--accent); color:#000;
-      transform:translateY(-2px);
+    nav button:hover { color: #00aced; }
+
+    nav ul {
+      display: none;
+      position: absolute;
+      right: 0;
+      background: rgba(0,0,0,0.9);
+      list-style: none;
+      margin: 0;
+      padding: 0.5em 0;
+      border-radius: 5px;
+      min-width: 150px;
     }
 
-    /* footer */
-    footer{
-      text-align:center;
-      padding:0.8rem 1rem;
-      color:#cfcfcf;
-      font-size:0.85rem;
-      background: rgba(0,0,0,0.45);
+    nav ul li {
+      padding: 0.5em 1em;
     }
 
-    /* responsive adjustments */
-    @media (max-width:640px){
-      .poem{ font-size:1.15rem; padding:1.4rem; }
-      body{ padding-bottom:0; }
-      .action-row{ flex-direction:column; gap:0.6rem; }
+    nav ul li a {
+      text-decoration: none;
+      color: #f0f0f0;
+      font-family: 'Montserrat', sans-serif;
     }
-  </style>
+
+    nav ul li a:hover {
+      color: #00aced;
+    }
+
+    nav:hover ul {
+      display: block;
+    }
+
+		/* Poem text */
+    .poem { max-width: 750px; margin: auto; }
+    .poem p {
+      margin: 1.5em 0;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: textFade 1s forwards;
+      text-align: center;
+			justify-content: center;
+      text-indent: 1.5em;
+			align-items: center;
+    }
+    .poem p:nth-child(1) { animation-delay: 0.5s; }
+    .poem p:nth-child(2) { animation-delay: 0.5s; }
+		.poem p:nth-child(3) { animation-delay: 0.5s; }
+    .poem p:nth-child(4) { animation-delay: 0.5s; }
+		.poem p:nth-child(5) { animation-delay: 0.5s; }
+		.poem p:nth-child(1) { animation-delay: 2s; }
+    .poem p:nth-child(2) { animation-delay: 2s; }
+		.poem p:nth-child(3) { animation-delay: 2s; }
+    .poem p:nth-child(4) { animation-delay: 2s; }
+		.poem p:nth-child(5) { animation-delay: 2s; }
+
+    /* Navigation buttons */
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 3em;
+      max-width: 750px;
+      width: 100%;
+    }
+    .nav-buttons a button {
+      background-color: transparent;
+      border: 1px solid #00aced;
+      color: #00aced;
+      font-style: italic;
+      padding: 0.5em 1.5em;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border-radius: 4px;
+    }
+    .nav-buttons a button:hover {
+      background-color: #00aced;
+      color: black;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 1em;
+      font-size: 0.9em;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes textFade {
+      to { opacity: 1; transform: translateY(0); }
+    }
+	</style>
 </head>
 <body>
 
@@ -166,38 +176,34 @@
 			</a>
 		</div>
     <h1>BlQCK: A Mirror in the Dark</h1>
-
-    <nav aria-label="Primary">
-      <button aria-haspopup="true" aria-expanded="false">☰ Menu</button>
-      <ul role="menu" aria-hidden="true">
-        <li role="none"><a role="menuitem" href="index.html">Home</a></li>
-        <li role="none"><a role="menuitem" href="contents.html">Contents</a></li>
-        <li role="none"><a role="menuitem" href="about.html">About</a></li>
+    <nav>
+      <button>☰ Menu</button>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Contents.html">Table of Contents</a></li>
+        <li><a href="About.html">About</a></li>
       </ul>
     </nav>
   </header>
 
-  <main class="poem-wrap" role="main">
-    <article class="poem" aria-labelledby="poem-title">
-      <h2 id="poem-title" style="font-family:'Montserrat',sans-serif;margin:0 0 1rem 0;color:#fff;font-size:1rem;font-weight:600;">Truth</h2>
-
-      <p class="line">What is the truth?</p>
-      <p class="line">Seek it</p>
-      <p class="line">Conceal the pain</p>
-      <p class="line">Shoulder the burden</p>
-      <p class="line">Function with it</p>
-      <p class="line">The wound heals</p>
-      <p class="line">The scar is forever</p>
-      <p class="line">Silence</p>
-      <p class="line">Choose death before dishonor.</p>
-
-      <div class="action-row" aria-label="Navigation">
-        <a href="contents.html" title="Back to contents"><button aria-label="Back to contents">← Contents</button></a>
-        <a href="Journey.html" title="Next"><button aria-label="Next page">Next →</button></a>
-      </div>
-    </article>
-  </main>
-
+  <div class="poem">
+		<p>Truth</p>
+		<p>What is the truth?</p>
+		<p>Seek it</p>
+		<p>Conceal the pain</p>
+		<p>Shoulder the burden</p>
+		<p>Function with it</p>
+		<p>The wound heals</p>
+		<p>The scar is forever</p>
+		<p>Silence</p>
+		<p>Choose death before dishonor.</p>
+  </div>
+	
+	<div class="nav-buttons">
+		<a href="Grief.html"><button>← Previous</button></a>
+		<a href="Life's illusions.html"><button>Next →</button></a>
+	</div>
+	
   <footer role="contentinfo">© 2025 Blqck — A Mirror in the Dark</footer>
 
 </body>
