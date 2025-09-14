@@ -2,25 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Blqck</title>
+  <title>Blqck | The-unsatisfied</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    /* Import fonts */
-    @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
-
-    /* Reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
-      background-color: #000;
-      color: #e5e5e5;
+      margin: 0;
       font-family: 'EB Garamond', serif;
-      font-size: 1.15em;
-      line-height: 1.8em;
-      padding: 6vh 12vw;
+      font-size: 1.2em;
+      line-height: 1.8;
+      color: #e6e6e6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)),
+				url("https://images.unsplash.com/photo-1529245019870-59a6a2b3cb94?auto=format&fit=crop&w=1350&q=80");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      text-align: center;
+      animation: fadeIn 2s ease-in-out;
     }
 		
 		/* Header */
@@ -105,32 +105,59 @@
       display: block;
     }
 
-    p {
-      margin-bottom: 2.2em;
-      text-align: justify;
+    /* Poem text */
+    .poem { max-width: 750px; margin: auto; }
+    .poem p {
+      margin: 1.5em 0;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: textFade 1s forwards;
+      text-align: center;
+			justify-content: center;
+      text-indent: 1.5em;
+			align-items: center;
     }
+    .poem p:nth-child(1) { animation-delay: 0.5s; }
+    .poem p:nth-child(2) { animation-delay: 2s; }
+		.poem p:nth-child(3) { animation-delay: 4s; }
+    .poem p:nth-child(4) { animation-delay: 4s; }
 
-    a {
+    /* Navigation buttons */
+    .nav-buttons {
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
       margin-top: 3em;
-      text-decoration: none;
+      max-width: 750px;
+      width: 100%;
     }
-
-    button {
-      padding: 0.7em 1.8em;
+    .nav-buttons a button {
       background-color: transparent;
-      color: #5a9bd4;
-      border: 1px solid #5a9bd4;
+      border: 1px solid #00aced;
+      color: #00aced;
       font-style: italic;
-      font-size: 1em;
+      padding: 0.5em 1.5em;
+      cursor: pointer;
+      transition: all 0.3s ease;
       border-radius: 4px;
-      transition: background-color 0.3s, color 0.3s;
+    }
+    .nav-buttons a button:hover {
+      background-color: #00aced;
+      color: black;
     }
 
-    button:hover {
-      background-color: #5a9bd4;
-      color: #000;
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 1em;
+      font-size: 0.9em;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes textFade {
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
@@ -153,40 +180,41 @@
       </ul>
     </nav>
   </header>
+	<div class="poem">
+		<p>
+			To live is to be powerful. A powerful man will do anything to maintain his position to keep control of the next man. It takes a man of character and valor to be in control despite being powerful because power corrupts and ultimately destroys. To be in control of power, you have to understand that the next man might be more powerful than you are and that takes wisdom
+		</p>
 
-	<p>
-		To live is to be powerful. A powerful man will do anything to maintain his position to keep control of the next man. It takes a man of character and valor to be in control despite being powerful because power corrupts and ultimately destroys. To be in control of power, you have to understand that the next man might be more powerful than you are and that takes wisdom
-	</p>
+		<p>
+			Power corrupts. The man of character knows not to be oppressive with his power because that might arouse the beast in the next man and you find out he weilds a corruptible power because he is not a man of character.
+		</p>
 
-	<p>
-		Power corrupts. The man of character knows not to be oppressive with his power because that might arouse the beast in the next man and you find out he weilds a corruptible power because he is not a man of character.
-	</p>
+		<p>
+			Who is a man of character? He's the man that has and upholds his principles and values. He holds himself and everyone around him to the same principles but never imposes nor expects them to live by it.
+		</p>
 
-	<p>
-		Who is a man of character? He's the man that has and upholds his principles and values. He holds himself and everyone around him to the same principles but never imposes nor expects them to live by it.
-	</p>
+		<p>
+			Who is wise? Is man wise? Only a fool sees himself as wise because the wisest man is just as wise as the next man if he accepts that he's a fool.
+		</p>
 
-	<p>
-		Who is wise? Is man wise? Only a fool sees himself as wise because the wisest man is just as wise as the next man if he accepts that he's a fool.
-	</p>
+		<p>
+			What is wisdom? Wisdom comes from knowing and accepting the truth. A wise man accepts the truth because it's in him to be truthful. 
+		</p>
 
-	<p>
-		What is wisdom? Wisdom comes from knowing and accepting the truth. A wise man accepts the truth because it's in him to be truthful. 
-	</p>
+		<p>
+			Even the most powerful has a weakness, eventually they are found out.
+		</p>
 
-	<p>
-		Even the most powerful has a weakness, eventually they are found out.
-	</p>
+		<p>
+			Death is final.
+		</p>
 
-	<p>
-		Death is final.
-	</p>
-
-	<a href="Patience.html">
-		<button>
-			click here
-		</button>
-	</a>
+			<div class="nav-buttons">
+				<a href="Gratitude.html"><button>← Previous</button></a>
+				<a href="Power.html"><button>Next →</button></a>
+			</div>
+	</div>
+	<footer role="contentinfo">© 2025 Blqck — A Mirror in the Dark</footer>
 
 </body>
 </html>

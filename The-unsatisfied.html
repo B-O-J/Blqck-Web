@@ -2,22 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Blqck</title>
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&display=swap" rel="stylesheet">
+  <title>Blqck | The-unsatisfied</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
-      background-color: #0d0d0d;
-      color: #e8e6e3;
+      margin: 0;
       font-family: 'EB Garamond', serif;
       font-size: 1.2em;
-      line-height: 1.9;
-      padding: 6vh 12vw;
+      line-height: 1.8;
+      color: #e6e6e6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)),
+				url("https://images.unsplash.com/photo-1529245019870-59a6a2b3cb94?auto=format&fit=crop&w=1350&q=80");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      text-align: center;
+      animation: fadeIn 2s ease-in-out;
     }
 		
 		/* Header */
@@ -101,33 +104,59 @@
     nav:hover ul {
       display: block;
     }
-    p {
-      margin-bottom: 2em;
-      text-align: justify;
-    }
-
-    a {
-      display: block;
+    /* Poem text */
+    .poem { max-width: 750px; margin: auto; }
+    .poem p {
+      margin: 1.5em 0;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: textFade 1s forwards;
       text-align: center;
+			justify-content: center;
+      text-indent: 1.5em;
+			align-items: center;
+    }
+    .poem p:nth-child(1) { animation-delay: 0.5s; }
+    .poem p:nth-child(2) { animation-delay: 2s; }
+		.poem p:nth-child(3) { animation-delay: 4s; }
+    .poem p:nth-child(4) { animation-delay: 4s; }
+
+    /* Navigation buttons */
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
       margin-top: 3em;
-      text-decoration: none;
+      max-width: 750px;
+      width: 100%;
     }
-
-    button {
+    .nav-buttons a button {
       background-color: transparent;
-      color: #87ceeb;
-      border: 1px solid #87ceeb;
-      padding: 0.6em 1.5em;
-      font-size: 1em;
+      border: 1px solid #00aced;
+      color: #00aced;
       font-style: italic;
-      border-radius: 5px;
-      transition: all 0.3s ease;
+      padding: 0.5em 1.5em;
       cursor: pointer;
+      transition: all 0.3s ease;
+      border-radius: 4px;
+    }
+    .nav-buttons a button:hover {
+      background-color: #00aced;
+      color: black;
     }
 
-    button:hover {
-      background-color: #87ceeb;
-      color: black;
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 1em;
+      font-size: 0.9em;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes textFade {
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
@@ -151,27 +180,29 @@
     </nav>
   </header>
 	
-	<p>
-		Why is man so unsatisfied?
-	</p>
+	<div class="poem">
+		<p>
+			Why is man so unsatisfied?
+		</p>
 
-	<p>
-		He never learns to be patient and is always lusting for pleasure even if his whole life, he has had to be patient for everything he has. In his chase for pleasure, he meets his ruin.
-	</p>
+		<p>
+			He never learns to be patient and is always lusting for pleasure even if his whole life, he has had to be patient for everything he has. In his chase for pleasure, he meets his ruin.
+		</p>
 
-	<p>
-		He needs to realize that he has a responsibility to be the best version of himself but in his constant chase for pleasure, man lies to himself so much for so long by not accepting that fact even though he knows it. Living in the delusion of comfort, he realizes he is actually uncomfortable and then continues to lie to himself until he destroys himself and everything in his path.
-	</p>
+		<p>
+			He needs to realize that he has a responsibility to be the best version of himself but in his constant chase for pleasure, man lies to himself so much for so long by not accepting that fact even though he knows it. Living in the delusion of comfort, he realizes he is actually uncomfortable and then continues to lie to himself until he destroys himself and everything in his path.
+		</p>
 
-	<p>
-		Ultimately, man needs to understand that he needs to do what he has to do and leave the rest because the rest is not up to him.
-	</p>
+		<p>
+			Ultimately, man needs to understand that he needs to do what he has to do and leave the rest because the rest is not up to him.
+		</p>
 
-	<a href="Power.html">
-		<button>
-			click here
-		</button>
-	</a>
+			<div class="nav-buttons">
+				<a href="Gratitude.html"><button>← Previous</button></a>
+				<a href="Power.html"><button>Next →</button></a>
+			</div>
+	</div>
+	<footer role="contentinfo">© 2025 Blqck — A Mirror in the Dark</footer>
 
 </body>
 </html>
