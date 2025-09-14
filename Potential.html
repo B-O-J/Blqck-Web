@@ -1,19 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Blqck</title>
+  <meta charset="UTF-8">
+  <title>Blqck | The Woman</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
-
     body {
-      background-color: #000;
-      color: #ddd;
+      margin: 0;
       font-family: 'EB Garamond', serif;
       font-size: 1.2em;
-      line-height: 1.8em;
-      padding: 5vh 10vw;
-      margin: 0;
+      line-height: 1.8;
+      color: #e6e6e6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)),
+				url("https://images.unsplash.com/photo-1593113598332-cd6b5f3b6b90?auto=format&fit=crop&w=1350&q=80);
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      text-align: center;
+      animation: fadeIn 2s ease-in-out;
     }
 		
 		/* Header */
@@ -98,29 +105,57 @@
       display: block;
     }
 
-    p {
-      margin-bottom: 2em;
-      max-width: 800px;
+    /* Poem text */
+    .poem { max-width: 750px; margin: auto; }
+    .poem p {
+      margin: 1.5em 0;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: textFade 1s forwards;
+      text-align: center;
+			justify-content: center;
+      text-indent: 1.5em;
+			align-items: center;
     }
+    .poem p:nth-child(1) { animation-delay: 0.5s; }
+    .poem p:nth-child(2) { animation-delay: 2s; }
 
-    button {
-      border: 1px solid #444;
+    /* Navigation buttons */
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 3em;
+      max-width: 750px;
+      width: 100%;
+    }
+    .nav-buttons a button {
       background-color: transparent;
-      color: #6a9fff;
+      border: 1px solid #00aced;
+      color: #00aced;
       font-style: italic;
-      font-size: 1em;
-      padding: 0.6em 1.2em;
+      padding: 0.5em 1.5em;
       cursor: pointer;
-      transition: background-color 0.3s ease, color 0.3s ease;
+      transition: all 0.3s ease;
+      border-radius: 4px;
+    }
+    .nav-buttons a button:hover {
+      background-color: #00aced;
+      color: black;
     }
 
-    button:hover {
-      background-color: #6a9fff;
-      color: #000;
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 1em;
+      font-size: 0.9em;
     }
 
-    a {
-      text-decoration: none;
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes textFade {
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
@@ -144,23 +179,23 @@
     </nav>
   </header>
 	
-	<p>
-	 Rarely is there anyone who sees potential, believes in it and help realize that potential. People see potential but seek to sabotage it and keep it unrealized because misery loves company and a degenerate definitely do not want to be seen as lone. The very people who refuse to help nurture and develop a potential are quick to associate with a successfully realized potential because success attracts. However, unrealized potential is common because the bearer is not even aware and instead is lost chasing a different cause.
-	</p> 
+	<div class="poem">
+		<p>
+		 Rarely is there anyone who sees potential, believes in it and help realize that potential. People see potential but seek to sabotage it and keep it unrealized because misery loves company and a degenerate definitely do not want to be seen as lone. The very people who refuse to help nurture and develop a potential are quick to associate with a successfully realized potential because success attracts. However, unrealized potential is common because the bearer is not even aware and instead is lost chasing a different cause.
+		</p> 
 
-	<p>
-		Ultimately, the onus falls on the bearer to be introspective, seek and apply knowledge to realize said potential.
-	</p> 
+		<p>
+			Ultimately, the onus falls on the bearer to be introspective, seek and apply knowledge to realize said potential.
+		</p> 
 
-	<p>
-		<a href="Gratitude.html">
-			<button>
-			click here
-			</button>
-		</a>  
-		
-	</p>
-
+		<div class="nav-buttons">
+      <a href="Who-is-God.html"><button>← Previous</button></a>
+      <a href="Gratitude.html"><button>Next →</button></a>
+    </div>
+	</div>
+	
+	<footer role="contentinfo">© 2025 Blqck — A Mirror in the Dark</footer>
+	
 </body>
 </html>
 
