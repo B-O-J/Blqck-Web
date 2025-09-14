@@ -1,19 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="UTF-8">
-  <title>Blqck</title>
+  <meta charset="UTF-8">
+  <title>Blqck | Hard-life</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;500&display=swap');
-
     body {
-      background-color: #000;
-      color: #e0e0e0;
-      font-family: 'Roboto Mono', monospace;
+      margin: 0;
+      font-family: 'EB Garamond', serif;
+      font-size: 1.2em;
       line-height: 1.8;
-      padding: 3em 10%;
-      font-size: 1.05em;
-      letter-spacing: 0.5px;
+      color: #e6e6e6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)),
+				url("https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1350&q=80");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      text-align: center;
+      animation: fadeIn 2s ease-in-out;
     }
 		
 		/* Header */
@@ -98,29 +105,35 @@
       display: block;
     }
 
-    p {
-      margin-bottom: 1.8em;
-      text-align: justify;
+    /* Poem text */
+    .poem { max-width: 750px; margin: auto; }
+    .poem p {
+      margin: 1.5em 0;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: textFade 1s forwards;
+      text-align: center;
+			justify-content: center;
+      text-indent: 1.5em;
+			align-items: center;
+    }
+    .poem p:nth-child(1) { animation-delay: 0.5s; }
+    .poem p:nth-child(2) { animation-delay: 2s; }
+    .poem p:nth-child(3) { animation-delay: 4s; }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 1em;
+      font-size: 0.9em;
     }
 
-    button {
-      border: 1px solid #444;
-      background-color: transparent;
-      color: #00bfff;
-      font-style: italic;
-      padding: 0.5em 1.2em;
-      font-size: 1em;
-      transition: all 0.3s ease;
-      border-radius: 0.3em;
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
-
-    button:hover {
-      background-color: #00bfff;
-      color: #000;
-    }
-
-    a {
-      text-decoration: none;
+    @keyframes textFade {
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
@@ -143,32 +156,34 @@
       </ul>
     </nav>
   </header>
-
-	<p>
-		Life is tough but you have to be tougher. They say “Go hard or Go home”, but it is exhausting and frustrating going hard every day because it doesn’t get any easier, it just gets tougher, especially when “Home” doesn’t feel like it anymore. You do not have the luxury to be weak or vulnerable because you don’t get any sympathy, a weak soul is useless. All you feel is bottled up rage as you forge ahead because when you look around, nobody cares until you snap and that in turn makes you look weak.
-	</p>
-
-	<p>
-		Just as nobody cares until you snap, nobody cares until you win. Behind the win is endless losses, pain, loneliness, depression, hatred, spite, doubt, envy, jealousy and many more. 
-	</p>
 	
-	<p>
-		Through all these emotions, to win, you have to be in control of yourself and your environment, this is the hardest part.
-	</p>
+	<div class="poem">
+		<p>
+			Life is tough but you have to be tougher. They say “Go hard or Go home”, but it is exhausting and frustrating going hard every day because it doesn’t get any easier, it just gets tougher, especially when “Home” doesn’t feel like it anymore. You do not have the luxury to be weak or vulnerable because you don’t get any sympathy, a weak soul is useless. All you feel is bottled up rage as you forge ahead because when you look around, nobody cares until you snap and that in turn makes you look weak.
+		</p>
 
-	<p>
-		This is why life is tough.
-	</p>   
-	
-	<p>
-		Win!
-	</p>
+		<p>
+			Just as nobody cares until you snap, nobody cares until you win. Behind the win is endless losses, pain, loneliness, depression, hatred, spite, doubt, envy, jealousy and many more. 
+		</p>
+		
+		<p>
+			Through all these emotions, to win, you have to be in control of yourself and your environment, this is the hardest part.
+		</p>
 
-  <p style="text-align: center;">
-    <a href="Who-is-God.html">
-      <button>click here</button>
-    </a>
-  </p>
-   
+		<p>
+			This is why life is tough.
+		</p>   
+		
+		<p>
+			Win!
+		</p>
+
+    <div class="nav-buttons">
+      <a href="Survival.html"><button>← Previous</button></a>
+      <a href="Who-is-God.html"><button>Next →</button></a>
+    </div>
+		</p>
+		
+  </div> 
   </body>
 </html>
