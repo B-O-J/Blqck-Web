@@ -2,18 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Blqck</title>
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
-
+  <title>Blqck | Love</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
-      background: linear-gradient(to bottom, #000000, #1a1a1a);
-      color: #f0f0f0;
+      margin: 0;
       font-family: 'EB Garamond', serif;
-      font-size: 1.3em;
-      line-height: 2;
-      padding: 4em 2em;
-      text-align: justify;
+      font-size: 1.2em;
+      line-height: 1.8;
+      color: #e6e6e6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)),
+				url("https://images.unsplash.com/photo-1529245019870-59a6a2b3cb94?auto=format&fit=crop&w=1350&q=80");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      text-align: center;
       animation: fadeIn 2s ease-in-out;
     }
 		
@@ -99,37 +105,72 @@
       display: block;
     }
 
-    p {
-      margin-bottom: 2em;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
+		/* Poem text */
+    .poem { max-width: 750px; margin: auto; }
+    .poem p {
+      margin: 1.5em 0;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: textFade 1s forwards;
+      text-align: center;
+			justify-content: center;
+      text-indent: 1.5em;
+			align-items: center;
     }
+    .poem p:nth-child(1) { animation-delay: 0.5s; }
+    .poem p:nth-child(2) { animation-delay: 0.5s; }
+		.poem p:nth-child(3) { animation-delay: 0.5s; }
+    .poem p:nth-child(4) { animation-delay: 2s; }
+		.poem p:nth-child(5) { animation-delay: 2s; }
+    .poem p:nth-child(6) { animation-delay: 2s; }
+		.poem p:nth-child(7) { animation-delay: 4s; }
+		.poem p:nth-child(8) { animation-delay: 4s; }
+		.poem p:nth-child(9) { animation-delay: 4s; }
+		.poem p:nth-child(10) { animation-delay: 6s; }
+    .poem p:nth-child(11) { animation-delay: 6s; }
+		.poem p:nth-child(12) { animation-delay: 6s; }
+    .poem p:nth-child(13) { animation-delay: 8s; }
+		.poem p:nth-child(14) { animation-delay: 8s; }
+		.poem p:nth-child(15) { animation-delay: 8s; }
+		.poem p:nth-child(16) { animation-delay: 8s; }
+		.poem p:nth-child(17) { animation-delay: 8s; }
+    .poem p:nth-child(18) { animation-delay: 8s; }
 
-    button {
+    /* Navigation buttons */
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 3em;
+      max-width: 750px;
+      width: 100%;
+    }
+    .nav-buttons a button {
       background-color: transparent;
-      border: 1px solid #5555ff;
-      color: #5555ff;
+      border: 1px solid #00aced;
+      color: #00aced;
       font-style: italic;
-      padding: 0.6em 1.5em;
-      font-size: 1em;
-      margin: 3em auto 0;
-      display: block;
+      padding: 0.5em 1.5em;
       cursor: pointer;
       transition: all 0.3s ease;
+      border-radius: 4px;
     }
-
-    button:hover {
-      background-color: #5555ff;
+    .nav-buttons a button:hover {
+      background-color: #00aced;
       color: black;
     }
 
-    a {
-      text-decoration: none;
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 1em;
+      font-size: 0.9em;
     }
 
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(40px); }
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes textFade {
       to { opacity: 1; transform: translateY(0); }
     }
   </style>
@@ -153,90 +194,92 @@
       </ul>
     </nav>
   </header>
-
-	<p>
-		What is preferable, to die or to be shameless? Death is inevitable, there is no hiding from it. 
-		Shamelessness then is a choice and can be avoided.
-	</p>
-	
-	<p>
-		What circumstances leave you with either option; your decisions. 
-		So then, how can you make constant perfect decisions as humans to avoid having to be shameless because humans themselves aren’t perfect and will sometimes make bad decisions.
-	</p> 
-
-	<p>
-		You look to God for guidance as He is deemed perfect, but is He really? He created humans and humans are imperfect, yet we are made in his image, to be more precise, humans are far from perfect, so is God too?
-	</p>
-
-	<p>
-		God is love and to love is to give, to give is to receive and to receive creates entitlement leading to expectations.
-	</p> 
-
-	<p>
-		To love is to expect and unmet expectations create bitterness and resentment. 
-	</p>
-
-	<p>
-		Love then is a disease that eats deep into the soul, a disease only death can heal.
-	</p> 
-
-
-	<p>
-		There is no imperfection in perfection but there is perfection in Imperfection.
-	</p>
-	
-	<p>
-		Is God imperfect? If no why are there variations in his creations? Why are all humans not black or white, why are there short and tall humans? 
-	</p>
-
-	<p>
-		Is God perfect? If yes , why does an imperfect human know what is and what is not perfect?  The potter shapes the clay in his hand to his desired perfection and if he finds it not worthy of his creation he smashes it and remolds it to his desired shape.
-	</p>
-
-	<p>
-		Humans assume the complexity of God to himself just to subdue his follow human.
-	</p> 
-
-	<p>
-		God never defined himself to man but man to man.
-	</p> 
-
-	<p>
-		What is preferable, to die or to be shameless? 
-		Death is preferable, asides the fact that death is certain, to be shameless is to be a living dead. In both cases, a dead man and a shameless man aren’t aware of their environments. 
-	</p>
-
-	<p>
-		Therefore, what is God?
-		He is a mystery above human comprehension and this ignorance is a virtue of mankind. In his curiosity to comprehend this mystery, humans make decisions that ultimately lead to his shamelessness until his death.
-	</p> 
-
-	<p>
-		Love being a disease that eats deep into the soul is God and this love is exercised in human existence.
-	</p> 
-
-	<p>
-		To love then, is not to expect because if so, man is waiting for man’s justification of love for himself.
-	</p>
-
-	<p>
-		Until man learns to love himself, only then can he reciprocate this love.
-	</p> 
-
-	<p>
-		Then love might not be a disease but a life to embrace.
-	</p> 
-
-	<p>
-	 Shalom.
-	</p>
-
-	<a href="Honesty.html">
-		<button>
-		click here
-		</button>
-	</a>
+	<div class="poem">
+		<p>
+			What is preferable, to die or to be shameless? Death is inevitable, there is no hiding from it. 
+			Shamelessness then is a choice and can be avoided.
+		</p>
 		
+		<p>
+			What circumstances leave you with either option; your decisions. 
+			So then, how can you make constant perfect decisions as humans to avoid having to be shameless because humans themselves aren’t perfect and will sometimes make bad decisions.
+		</p> 
+
+		<p>
+			You look to God for guidance as He is deemed perfect, but is He really? He created humans and humans are imperfect, yet we are made in his image, to be more precise, humans are far from perfect, so is God too?
+		</p>
+
+		<p>
+			God is love and to love is to give, to give is to receive and to receive creates entitlement leading to expectations.
+		</p> 
+
+		<p>
+			To love is to expect and unmet expectations create bitterness and resentment. 
+		</p>
+
+		<p>
+			Love then is a disease that eats deep into the soul, a disease only death can heal.
+		</p> 
+
+
+		<p>
+			There is no imperfection in perfection but there is perfection in Imperfection.
+		</p>
+		
+		<p>
+			Is God imperfect? If no why are there variations in his creations? Why are all humans not black or white, why are there short and tall humans? 
+		</p>
+
+		<p>
+			Is God perfect? If yes , why does an imperfect human know what is and what is not perfect?  The potter shapes the clay in his hand to his desired perfection and if he finds it not worthy of his creation he smashes it and remolds it to his desired shape.
+		</p>
+
+		<p>
+			Humans assume the complexity of God to himself just to subdue his follow human.
+		</p> 
+
+		<p>
+			God never defined himself to man but man to man.
+		</p> 
+
+		<p>
+			What is preferable, to die or to be shameless? 
+			Death is preferable, asides the fact that death is certain, to be shameless is to be a living dead. In both cases, a dead man and a shameless man aren’t aware of their environments. 
+		</p>
+
+		<p>
+			Therefore, what is God?
+			He is a mystery above human comprehension and this ignorance is a virtue of mankind. In his curiosity to comprehend this mystery, humans make decisions that ultimately lead to his shamelessness until his death.
+		</p> 
+
+		<p>
+			Love being a disease that eats deep into the soul is God and this love is exercised in human existence.
+		</p> 
+
+		<p>
+			To love then, is not to expect because if so, man is waiting for man’s justification of love for himself.
+		</p>
+
+		<p>
+			Until man learns to love himself, only then can he reciprocate this love.
+		</p> 
+
+		<p>
+			Then love might not be a disease but a life to embrace.
+		</p> 
+
+		<p>
+		 Shalom.
+		</p>
+
+		<div class="nav-buttons">
+			<a href="The-wanderer.html"><button>← Previous</button></a>
+			<a href="Honesty.html"><button>Next →</button></a>
+		</div>
+	</div>
+	
+	<footer role="contentinfo">© 2025 Blqck — A Mirror in the Dark</footer>
+	
 </body> 
 </html>
 

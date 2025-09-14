@@ -1,25 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">  
+<html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Blqck</title>
-
-	<!-- Font Import -->
-	<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
-
-	<style>
-		body {
-			background-color: #000;
-			color: #f0f0f0;
-			font-family: 'EB Garamond', serif;
-			line-height: 1.8;
-			font-size: 1.2em;
-			padding: 4em 2em;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: center;
-		}
+  <meta charset="UTF-8">
+  <title>Blqck | Life's illusions</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'EB Garamond', serif;
+      font-size: 1.2em;
+      line-height: 1.8;
+      color: #e6e6e6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)),
+				url("https://images.unsplash.com/photo-1529245019870-59a6a2b3cb94?auto=format&fit=crop&w=1350&q=80");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      text-align: center;
+      animation: fadeIn 2s ease-in-out;
+    }
 		
 		/* Header */
     header {
@@ -103,41 +105,61 @@
       display: block;
     }
 
-		p {
-			max-width: 700px;
-			text-align: center;
-			margin-bottom: 1.5em;
-			opacity: 0;
-			animation: fadeIn 1.2s ease forwards;
-		}
+		/* Poem text */
+    .poem { max-width: 750px; margin: auto; }
+    .poem p {
+      margin: 1.5em 0;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: textFade 1s forwards;
+      text-align: center;
+			justify-content: center;
+      text-indent: 1.5em;
+			align-items: center;
+    }
+    .poem p:nth-child(1) { animation-delay: 0.5s; }
+    .poem p:nth-child(2) { animation-delay: 0.5s; }
+		.poem p:nth-child(3) { animation-delay: 2s; }
+    .poem p:nth-child(4) { animation-delay: 2s; }
+		.poem p:nth-child(5) { animation-delay: 4s; }
 
-		p:nth-child(1) { animation-delay: 0.3s; }
-		p:nth-child(2) { animation-delay: 0.6s; }
-		p:nth-child(3) { animation-delay: 0.9s; }
-		p:nth-child(4) { animation-delay: 1.2s; }
-		p:nth-child(5) { animation-delay: 1.5s; }
+    /* Navigation buttons */
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 3em;
+      max-width: 750px;
+      width: 100%;
+    }
+    .nav-buttons a button {
+      background-color: transparent;
+      border: 1px solid #00aced;
+      color: #00aced;
+      font-style: italic;
+      padding: 0.5em 1.5em;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border-radius: 4px;
+    }
+    .nav-buttons a button:hover {
+      background-color: #00aced;
+      color: black;
+    }
 
-		a button {
-			margin-top: 2em;
-			padding: 0.8em 2em;
-			background-color: transparent;
-			border: 1px solid #888;
-			color: #00aced;
-			font-style: italic;
-			font-size: 1em;
-			border-radius: 5px;
-			transition: background 0.3s ease, color 0.3s ease;
-		}
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 1em;
+      font-size: 0.9em;
+    }
 
-		a button:hover {
-			background-color: #222;
-			color: white;
-		}
-
-		@keyframes fadeIn {
-			from { opacity: 0; transform: translateY(10px); }
-			to { opacity: 1; transform: translateY(0); }
-		}
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes textFade {
+      to { opacity: 1; transform: translateY(0); }
+    }
 	</style>
 	 
 </head>
@@ -160,16 +182,21 @@
       </ul>
     </nav>
   </header>
+	<div class="poem">
+	
+		<p>Captivated by the beauty</p>
+		<p>Lost in the illusion</p>
+		<p>Wallowed in the delusion</p>
+		<p>Jarred back into reality</p>
+		<p>A pleasurable deception.</p>
 
-	<p>Captivated by the beauty</p>
-	<p>Lost in the illusion</p>
-	<p>Wallowed in the delusion</p>
-	<p>Jarred back into reality</p>
-	<p>A pleasurable deception.</p>
-
-	<a href="">
-		<button>click here</button>
-	</a>
+		<div class="nav-buttons">
+			<a href="Grief.html"><button>← Previous</button></a>
+			<a href="Life's illusions.html"><button>Next →</button></a>
+		</div>
+	</div>
+	
+	<footer role="contentinfo">© 2025 Blqck — A Mirror in the Dark</footer>
 
 </body>
 </html>

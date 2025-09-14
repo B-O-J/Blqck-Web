@@ -2,20 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Blqck</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&family=Roboto+Mono&display=swap" rel="stylesheet">
-
+  <title>Blqck | Live</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
-      background-color: #000;
-      color: #e0e0e0;
+      margin: 0;
       font-family: 'EB Garamond', serif;
+      font-size: 1.2em;
       line-height: 1.8;
-      font-size: 1.2rem;
-      padding: 4em 2em;
-      max-width: 800px;
-      margin: auto;
+      color: #e6e6e6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)),
+				url("https://images.unsplash.com/photo-1529245019870-59a6a2b3cb94?auto=format&fit=crop&w=1350&q=80");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      text-align: center;
+      animation: fadeIn 2s ease-in-out;
     }
 		
 		/* Header */
@@ -100,33 +105,63 @@
       display: block;
     }
 
-    p {
-      margin-bottom: 2em;
-      text-align: justify;
+		/* Poem text */
+    .poem { max-width: 750px; margin: auto; }
+    .poem p {
+      margin: 1.5em 0;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: textFade 1s forwards;
+      text-align: center;
+			justify-content: center;
+      text-indent: 1.5em;
+			align-items: center;
     }
+    .poem p:nth-child(1) { animation-delay: 0.5s; }
+    .poem p:nth-child(2) { animation-delay: 0.5s; }
+		.poem p:nth-child(3) { animation-delay: 2s; }
+    .poem p:nth-child(4) { animation-delay: 2s; }
+		.poem p:nth-child(5) { animation-delay: 4s; }
+    .poem p:nth-child(6) { animation-delay: 4s; }
+		.poem p:nth-child(7) { animation-delay: 6s; }
+    .poem p:nth-child(8) { animation-delay: 6s; }
 
-    a {
-      text-decoration: none;
+    /* Navigation buttons */
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 3em;
+      max-width: 750px;
+      width: 100%;
     }
-
-    button {
-      display: inline-block;
-      margin-top: 2em;
-      padding: 0.7em 1.5em;
+    .nav-buttons a button {
       background-color: transparent;
-      border: 1px solid #555;
-      color: #61dafb;
+      border: 1px solid #00aced;
+      color: #00aced;
       font-style: italic;
-      font-family: 'Roboto Mono', monospace;
-      font-size: 1rem;
+      padding: 0.5em 1.5em;
+      cursor: pointer;
       transition: all 0.3s ease;
-      border-radius: 6px;
+      border-radius: 4px;
+    }
+    .nav-buttons a button:hover {
+      background-color: #00aced;
+      color: black;
     }
 
-    button:hover {
-      background-color: #111;
-      color: #fff;
-      border-color: #61dafb;
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 1em;
+      font-size: 0.9em;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes textFade {
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
@@ -149,44 +184,47 @@
       </ul>
     </nav>
   </header>
- 
-	<p>
-		They say, don’t borrow grief from the future; is it safe then to borrow future happiness? Imagination is beautiful and endless and the soul relishes such pleasure.
-	</p> 
+	<div class="poem">
+		<p>
+			They say, don’t borrow grief from the future; is it safe then to borrow future happiness? Imagination is beautiful and endless and the soul relishes such pleasure.
+		</p> 
 
-	<p>
-		Life isn’t an imagination, life happens such that the beautiful imagination can be corrupted by life’s realities, sucking the happiness out of the soul.
-	</p> 
+		<p>
+			Life isn’t an imagination, life happens such that the beautiful imagination can be corrupted by life’s realities, sucking the happiness out of the soul.
+		</p> 
 
-	<p>
-		Can the bitter imagine happiness?
-	</p>
+		<p>
+			Can the bitter imagine happiness?
+		</p>
 
-	<p>
-		Is it safe to remain bitter?
-	</p> 
+		<p>
+			Is it safe to remain bitter?
+		</p> 
 
-	<p>
-		Just as life isn’t an imagination, life isn’t endless but to ensure life is lived and enjoyed the soul needs happiness, it takes pleasure in the beauty of life while embracing the realities that results in grief. 
-	</p>
+		<p>
+			Just as life isn’t an imagination, life isn’t endless but to ensure life is lived and enjoyed the soul needs happiness, it takes pleasure in the beauty of life while embracing the realities that results in grief. 
+		</p>
 
-	<p>
-		The bitter is deprived of happiness as they can only imagine it, remaining in  grief of reality in the present and in the future.
-	</p> 
+		<p>
+			The bitter is deprived of happiness as they can only imagine it, remaining in  grief of reality in the present and in the future.
+		</p> 
 
-	<p>
-		Living in reality creates happiness, beautifying the soul, remaining incorruptible in the present and in the future.
-	</p> 
+		<p>
+			Living in reality creates happiness, beautifying the soul, remaining incorruptible in the present and in the future.
+		</p> 
 
-	<p>
-		Live.
-	</p>
+		<p>
+			Live.
+		</p>
 
-	<a href ="Grief.html">
-		<button>
-		click here
-		</button>
-	</a>
+		<div class="nav-buttons">
+			<a href="Journey.html"><button>← Previous</button></a>
+			<a href="Grief.html"><button>Next →</button></a>
+		</div>
+	</div>
+	
+	<footer role="contentinfo">© 2025 Blqck — A Mirror in the Dark</footer>
+
  
 </body>
 </html>

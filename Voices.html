@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-  <title>Blqck</title>
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Raleway:wght@300;400&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>Blqck | Voices</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
-      background-color: #0a0a0a;
-      color: #f2f2f2;
+      margin: 0;
       font-family: 'EB Garamond', serif;
+      font-size: 1.2em;
       line-height: 1.8;
-      padding: 4em 2em;
-      max-width: 800px;
-      margin: auto;
+      color: #e6e6e6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)),
+				url("https://images.unsplash.com/photo-1529245019870-59a6a2b3cb94?auto=format&fit=crop&w=1350&q=80");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      text-align: center;
+      animation: fadeIn 2s ease-in-out;
     }
 		
 		/* Header */
@@ -97,30 +105,61 @@
       display: block;
     }
 
-    p {
-      margin-bottom: 1.8em;
-      font-size: 1.1em;
-      letter-spacing: 0.4px;
+		/* Poem text */
+    .poem { max-width: 750px; margin: auto; }
+    .poem p {
+      margin: 1.5em 0;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: textFade 1s forwards;
+      text-align: center;
+			justify-content: center;
+      text-indent: 1.5em;
+			align-items: center;
     }
+    .poem p:nth-child(1) { animation-delay: 0.5s; }
+    .poem p:nth-child(2) { animation-delay: 0.5s; }
+		.poem p:nth-child(3) { animation-delay: 2s; }
+    .poem p:nth-child(4) { animation-delay: 2s; }
+		.poem p:nth-child(5) { animation-delay: 4s; }
+    .poem p:nth-child(6) { animation-delay: 4s; }}
 
-    button {
-      border: 1px solid #444;
+    /* Navigation buttons */
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 3em;
+      max-width: 750px;
+      width: 100%;
+    }
+    .nav-buttons a button {
       background-color: transparent;
-      color: #57a6ff;
+      border: 1px solid #00aced;
+      color: #00aced;
       font-style: italic;
-      padding: 0.6em 1.2em;
-      font-family: 'Raleway', sans-serif;
-      transition: background-color 0.3s ease, color 0.3s ease;
-      margin-top: 2em;
+      padding: 0.5em 1.5em;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border-radius: 4px;
+    }
+    .nav-buttons a button:hover {
+      background-color: #00aced;
+      color: black;
     }
 
-    button:hover {
-      background-color: #111;
-      color: white;
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 1em;
+      font-size: 0.9em;
     }
 
-    a {
-      text-decoration: none;
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes textFade {
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
@@ -143,37 +182,39 @@
       </ul>
     </nav>
   </header>
+	<div class="poem">
+		<p>
+			How do you silence the voices in your head; drugs, alcohol, women or death?
+		</p>
+
+		<p>
+			In your weakness, how strong will you be - maybe all you need is awareness because even the strongest man has a weakness.
+		</p>
+
+		<p>
+			It is dangerous to be weak, predators are ruthless and they bite ferociously but awareness in moments of weakness saves you from the traps laid out - predators are sharp and always on the prowl. 
+		</p>
+
+
+		<p>
+			Indulge yourself and your awareness will make you comfortable enough to recharge, you will realize all they want is to be heard and acknowledged.
+		</p>
+
+		<p>
+			Then they are silent, only to begin again until the silence is permanent.
+		</p>
+
+		<p>
+			You are the 'voices' in your head - do not wait for them to be loud before you acknowledge them because the most ruthless predator is you.
+		</p>
+
+			<div class="nav-buttons">
+				<a href="Patience.html"><button>← Previous</button></a>
+				<a href="The-wanderer"><button>Next →</button></a>
+			</div>
+	</div>
 	
-	<p>
-		How do you silence the voices in your head; drugs, alcohol, women or death?
-	</p>
-
-	<p>
-		In your weakness, how strong will you be - maybe all you need is awareness because even the strongest man has a weakness.
-	</p>
-
-	<p>
-		It is dangerous to be weak, predators are ruthless and they bite ferociously but awareness in moments of weakness saves you from the traps laid out - predators are sharp and always on the prowl. 
-	</p>
-
-
-	<p>
-		Indulge yourself and your awareness will make you comfortable enough to recharge, you will realize all they want is to be heard and acknowledged.
-	</p>
-
-	<p>
-		Then they are silent, only to begin again until the silence is permanent.
-	</p>
-
-	<p>
-		You are the 'voices' in your head - do not wait for them to be loud before you acknowledge them because the most ruthless predator is you.
-	</p>
-
-	<a href="The-wanderer.html">
-		<button>
-			click here
-		</button>
-	</a>
+	<footer role="contentinfo">© 2025 Blqck — A Mirror in the Dark</footer>
 
 </body>
 </html>

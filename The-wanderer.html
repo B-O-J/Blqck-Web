@@ -2,23 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Blqck</title>
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <title>Blqck | The-wanderer</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
-      background-color: #0a0a0a;
-      color: #e6e6e6;
+      margin: 0;
       font-family: 'EB Garamond', serif;
-      font-size: 1.3em;
-      line-height: 1.9em;
-      padding: 6vh 12vw;
-      transition: background-color 0.4s ease;
+      font-size: 1.2em;
+      line-height: 1.8;
+      color: #e6e6e6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)),
+				url("https://images.unsplash.com/photo-1529245019870-59a6a2b3cb94?auto=format&fit=crop&w=1350&q=80");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      text-align: center;
+      animation: fadeIn 2s ease-in-out;
     }
 	 
   	/* Header */
@@ -103,37 +105,63 @@
       display: block;
     }
 
-    p {
-      margin-bottom: 1.7em;
-      text-align: justify;
+		/* Poem text */
+    .poem { max-width: 750px; margin: auto; }
+    .poem p {
+      margin: 1.5em 0;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: textFade 1s forwards;
+      text-align: center;
+			justify-content: center;
+      text-indent: 1.5em;
+			align-items: center;
     }
+    .poem p:nth-child(1) { animation-delay: 0.5s; }
+    .poem p:nth-child(2) { animation-delay: 0.5s; }
+		.poem p:nth-child(3) { animation-delay: 2s; }
+    .poem p:nth-child(4) { animation-delay: 2s; }
+		.poem p:nth-child(5) { animation-delay: 4s; }
+    .poem p:nth-child(6) { animation-delay: 4s; }
+		.poem p:nth-child(7) { animation-delay: 6s; }
+    .poem p:nth-child(8) { animation-delay: 6s; }
 
-    a {
-      text-decoration: none;
+    /* Navigation buttons */
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 3em;
+      max-width: 750px;
+      width: 100%;
     }
-
-    button {
-      display: inline-block;
-      padding: 0.7em 2em;
+    .nav-buttons a button {
       background-color: transparent;
-      color: #89CFF0;
+      border: 1px solid #00aced;
+      color: #00aced;
       font-style: italic;
-      font-size: 1em;
-      border: 1px solid #89CFF0;
-      border-radius: 6px;
+      padding: 0.5em 1.5em;
       cursor: pointer;
       transition: all 0.3s ease;
+      border-radius: 4px;
+    }
+    .nav-buttons a button:hover {
+      background-color: #00aced;
+      color: black;
     }
 
-    button:hover {
-      background-color: #89CFF0;
-      color: #0a0a0a;
-    }
-
-    a {
-      display: block;
+    /* Footer */
+    footer {
       text-align: center;
-      margin-top: 3em;
+      padding: 1em;
+      font-size: 0.9em;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes textFade {
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
@@ -157,25 +185,30 @@
     </nav>
   </header>
 	
-  <p>Be the wanderer.</p>
+	<div class="poem">
+		<p>Be the wanderer.</p>
 
-  <p>Some are lost, some are simply observing while wandering.</p>
+		<p>Some are lost, some are simply observing while wandering.</p>
 
-  <p>It is he who wanders that gets lost.</p>
+		<p>It is he who wanders that gets lost.</p>
 
-  <p>Be the artist.</p>
+		<p>Be the artist.</p>
 
-  <p>As you wander and observe, create.</p>
+		<p>As you wander and observe, create.</p>
 
-  <p>While creating, the artist must recognize his foolishness – then utilize it.</p>
+		<p>While creating, the artist must recognize his foolishness – then utilize it.</p>
 
-  <p>Always pray for the artist.</p>
+		<p>Always pray for the artist.</p>
 
-  <p>The more observant you are, the more creative you become.</p>
+		<p>The more observant you are, the more creative you become.</p>
 
-  <a href="Love.html">
-    <button>click here</button>
-  </a>
+		<div class="nav-buttons">
+			<a href="Voices.html"><button>← Previous</button></a>
+			<a href="Love.html"><button>Next →</button></a>
+		</div>
+	</div>
+	
+	<footer role="contentinfo">© 2025 Blqck — A Mirror in the Dark</footer>
 
 </body>
 

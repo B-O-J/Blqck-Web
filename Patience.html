@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-  <title>Blqck</title>
+  <meta charset="UTF-8">
+  <title>Blqck | Patience</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400&display=swap');
-
     body {
-      background-color: #0d0d0d;
-      color: #e0e0e0;
+      margin: 0;
       font-family: 'EB Garamond', serif;
       font-size: 1.2em;
-      line-height: 1.8em;
-      max-width: 800px;
-      margin: 4em auto;
-      padding: 0 1.5em;
+      line-height: 1.8;
+      color: #e6e6e6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)),
+				url("https://images.unsplash.com/photo-1529245019870-59a6a2b3cb94?auto=format&fit=crop&w=1350&q=80");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      text-align: center;
+      animation: fadeIn 2s ease-in-out;
     }
 		
 		/* Header */
@@ -99,26 +105,64 @@
       display: block;
     }
 
-    p {
-      margin-bottom: 1.5em;
-      text-align: justify;
+		/* Poem text */
+    .poem { max-width: 750px; margin: auto; }
+    .poem p {
+      margin: 1.5em 0;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: textFade 1s forwards;
+      text-align: center;
+			justify-content: center;
+      text-indent: 1.5em;
+			align-items: center;
     }
+    .poem p:nth-child(1) { animation-delay: 0.5s; }
+    .poem p:nth-child(2) { animation-delay: 2s; }
+		.poem p:nth-child(3) { animation-delay: 4s; }
+    .poem p:nth-child(4) { animation-delay: 4s; }
+		.poem p:nth-child(5) { animation-delay: 0.5s; }
+    .poem p:nth-child(6) { animation-delay: 2s; }
+		.poem p:nth-child(7) { animation-delay: 4s; }
+    .poem p:nth-child(8) { animation-delay: 4s; }
+		.poem p:nth-child(9) { animation-delay: 4s; }
 
-    a button {
-      margin-top: 2em;
-      padding: 0.7em 1.5em;
+    /* Navigation buttons */
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 3em;
+      max-width: 750px;
+      width: 100%;
+    }
+    .nav-buttons a button {
       background-color: transparent;
-      color: #87cefa;
-      border: 1px solid #87cefa;
-      border-radius: 5px;
+      border: 1px solid #00aced;
+      color: #00aced;
       font-style: italic;
-      font-size: 1em;
-      transition: background-color 0.3s, color 0.3s;
+      padding: 0.5em 1.5em;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border-radius: 4px;
+    }
+    .nav-buttons a button:hover {
+      background-color: #00aced;
+      color: black;
     }
 
-    a button:hover {
-      background-color: #87cefa;
-      color: #0d0d0d;
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 1em;
+      font-size: 0.9em;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes textFade {
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
@@ -126,63 +170,66 @@
 <body>
 
 	<header>
-    <div class="logo">
+		<div class="logo">
 			<a href="index.html" class="logo-link">
 				<img src="Images/Logo.png" alt="Logo" class="logo">
 			</a>
 		</div>
-    <h1>BlQCK: A Mirror in the Dark</h1>
-    <nav>
-      <button>☰ Menu</button>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="Contents.html">Table of Contents</a></li>
-        <li><a href="About.html">About</a></li>
-      </ul>
-    </nav>
-  </header>
+		<h1>BlQCK: A Mirror in the Dark</h1>
+		<nav>
+			<button>☰ Menu</button>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="Contents.html">Table of Contents</a></li>
+				<li><a href="About.html">About</a></li>
+			</ul>
+		</nav>
+	</header>
+	<div class="poem">	
+		
+		<p>
+			Patience.
+		</p>
+
+		<p>
+			It takes a strong mind to be patient because patience is closely related to time wasting. The hope of a reward dangled enticingly is tempting and sometimes all that is needed is to put in a little more effort to attain it, the curiosity is satisfied.
+		</p>  
+
+		<p>
+			How then do you discern if and when it’s all time wasting even after putting in extra efforts?
+		</p>
+		
+		<p>
+			Detachment.
+		</p>
+
+		<p>
+			It is important to understand that no reward is more enticing than becoming the best version of the self primarily because of the effort put in and that requires patience with the self.
+		</p>
+
+		<p>
+			It is best to let go of the satisfaction the reward promises and be irrationally focused on the effort required to attain said reward.
+		</p>
+
+		<p>
+			A strong mind realizes the need to be detached because the absence of detachment breeds entitlement which hampers the focus needed for the effort required. Then, the effort seem wasted because the reward is not attained.
+		</p>
+
+		<p>
+			Detachment from the reward itself and the satisfaction it brings, coupled with the focus and awareness on the effort put in on each step taken and patience with the self towards attaining said reward is all that is important.
+		</p>
+
+		<p>
+			Then, it is easier to discern if and when it’s all a waste of time because the satisfaction is not on the reward but on the effort put in and whether or not the reward is attained, the self is developed because patience is learnt.
+		</p>
+
+		<div class="nav-buttons">
+			<a href="Power.html"><button>← Previous</button></a>
+			<a href="Voices"><button>Next →</button></a>
+		</div>
+	</div>
 	
-	<p>
-		Patience.
-	</p>
-
-	<p>
-		It takes a strong mind to be patient because patience is closely related to time wasting. The hope of a reward dangled enticingly is tempting and sometimes all that is needed is to put in a little more effort to attain it, the curiosity is satisfied.
-	</p>  
-
-	<p>
-	How then do you discern if and when it’s all time wasting even after putting in extra efforts?
-	</p>
+	<footer role="contentinfo">© 2025 Blqck — A Mirror in the Dark</footer>
 	
-	<p>
-	Detachment.
-	</p>
-
-	<p>
-	It is important to understand that no reward is more enticing than becoming the best version of the self primarily because of the effort put in and that requires patience with the self.
-	</p>
-
-	<p>
-	It is best to let go of the satisfaction the reward promises and be irrationally focused on the effort required to attain said reward.
-	</p>
-
-	<p>
-	A strong mind realizes the need to be detached because the absence of detachment breeds entitlement which hampers the focus needed for the effort required. Then, the effort seem wasted because the reward is not attained.
-	</p>
-
-	<p>
-	Detachment from the reward itself and the satisfaction it brings, coupled with the focus and awareness on the effort put in on each step taken and patience with the self towards attaining said reward is all that is important.
-	</p>
-
-	<p>
-	Then, it is easier to discern if and when it’s all a waste of time because the satisfaction is not on the reward but on the effort put in and whether or not the reward is attained, the self is developed because patience is learnt.
-	</p>
-
-		<a href="Voices.html">
-			<button>
-				click here
-			</button>
-		</a>
-
 </body> 
 </html>

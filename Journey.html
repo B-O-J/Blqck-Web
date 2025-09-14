@@ -2,24 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Blqck</title>
+  <title>Blqck | Journey</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&display=swap');
-
     body {
-      background-color: #000;
-      color: #eee;
-      font-family: 'EB Garamond', serif;
       margin: 0;
-      padding: 0;
+      font-family: 'EB Garamond', serif;
+      font-size: 1.2em;
+      line-height: 1.8;
+      color: #e6e6e6;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      padding: 2em;
-      line-height: 1.7;
-      letter-spacing: 0.3px;
+      background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)),
+				url("https://images.unsplash.com/photo-1529245019870-59a6a2b3cb94?auto=format&fit=crop&w=1350&q=80");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      text-align: center;
+      animation: fadeIn 2s ease-in-out;
     }
 		
 		/* Header */
@@ -104,29 +105,63 @@
       display: block;
     }
 
-    p {
-      max-width: 700px;
-      margin: 1.2em auto;
-      font-size: 1.2em;
+		/* Poem text */
+    .poem { max-width: 750px; margin: auto; }
+    .poem p {
+      margin: 1.5em 0;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: textFade 1s forwards;
+      text-align: center;
+			justify-content: center;
+      text-indent: 1.5em;
+			align-items: center;
     }
+    .poem p:nth-child(1) { animation-delay: 0.5s; }
+    .poem p:nth-child(2) { animation-delay: 0.5s; }
+		.poem p:nth-child(3) { animation-delay: 2s; }
+    .poem p:nth-child(4) { animation-delay: 2s; }
+		.poem p:nth-child(5) { animation-delay: 4s; }
+    .poem p:nth-child(6) { animation-delay: 4s; }
+		.poem p:nth-child(7) { animation-delay: 6s; }
+    .poem p:nth-child(8) { animation-delay: 6s; }
 
-    a button {
-      margin-top: 2em;
-      padding: 0.7em 1.5em;
-      font-size: 1em;
-      font-style: italic;
+    /* Navigation buttons */
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 3em;
+      max-width: 750px;
+      width: 100%;
+    }
+    .nav-buttons a button {
       background-color: transparent;
-      border: 1px solid #5555ff;
-      color: #5555ff;
+      border: 1px solid #00aced;
+      color: #00aced;
+      font-style: italic;
+      padding: 0.5em 1.5em;
       cursor: pointer;
       transition: all 0.3s ease;
-      border-radius: 5px;
+      border-radius: 4px;
+    }
+    .nav-buttons a button:hover {
+      background-color: #00aced;
+      color: black;
     }
 
-    a button:hover {
-      background-color: #5555ff;
-      color: black;
-      box-shadow: 0 0 10px #5555ff50;
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 1em;
+      font-size: 0.9em;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes textFade {
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
@@ -149,44 +184,46 @@
       </ul>
     </nav>
   </header>
+	<div class="poem">
+		<p>
+			The long walk 
+		</p>
+		
+		<p>
+			Everybody is simply just trying their best to keep living but we barely survive although we like to think we understand it, it eludes us still. 
+		</p>
 
-	<p>
-		The long walk 
-	</p>
+		<p>
+			Survival is the only option, for as long as you can. While most prefer to live off others, very few are receptive to the ugly truth about survival being only for the fittest because it is tougher to do it alone. 
+		</p>
+
+		<p>
+			Dependence is reserved for the weak and the weak barely survives but the fittest, a little longer. 
+		</p>
+
+		<p>
+			The longer you survive, the better you become at it until the certainty of death, the bit that eludes us. 
+		</p>
+
+		<p>
+			Having accepted the ugly, the few see the beauty in the struggle and live with it, thus are fulfilled having actually lived. 
+		</p>
+
+		<p>
+			Not so much for the majority who prefer to shy away from the ugly, because they choose to deny the fact that it is a lone journey and thus cannot experience the beauty of living that brings fulfillment. 
+		</p>
+
+		<p>
+			Most are dead even though they are still alive, they are not living. 
+		</p>
+
+		<div class="nav-buttons">
+			<a href="Truth.html"><button>← Previous</button></a>
+			<a href="Live.html"><button>Next →</button></a>
+		</div>
+	</div>
 	
-	<p>
-		Everybody is simply just trying their best to keep living but we barely survive although we like to think we understand it, it eludes us still. 
-	</p>
-
-	<p>
-		Survival is the only option, for as long as you can. While most prefer to live off others, very few are receptive to the ugly truth about survival being only for the fittest because it is tougher to do it alone. 
-	</p>
-
-	<p>
-		Dependence is reserved for the weak and the weak barely survives but the fittest, a little longer. 
-	</p>
-
-	<p>
-		The longer you survive, the better you become at it until the certainty of death, the bit that eludes us. 
-	</p>
-
-	<p>
-		Having accepted the ugly, the few see the beauty in the struggle and live with it, thus are fulfilled having actually lived. 
-	</p>
-
-	<p>
-		Not so much for the majority who prefer to shy away from the ugly, because they choose to deny the fact that it is a lone journey and thus cannot experience the beauty of living that brings fulfillment. 
-	</p>
-
-	<p>
-		Most are dead even though they are still alive, they are not living. 
-	</p>
-
-	<a href = "Live.html">
-		<button>
-			click here
-		</button>
-	</a>
+	<footer role="contentinfo">© 2025 Blqck — A Mirror in the Dark</footer>
 
 </body> 
 </html>
